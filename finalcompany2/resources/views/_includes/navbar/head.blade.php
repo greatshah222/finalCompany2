@@ -3,7 +3,6 @@
 <html lang="zxx">
 
 <head>
-    <title>Bettering an Education Category Bootstrap Responsive Website Template | Home :: w3layouts</title>
     <!-- Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,11 +18,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
     </script>
     <!-- // Meta Tags -->
-    <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" media="all">
-    <link rel="stylesheet" href="{{asset('css/flexslider.css')}}" type="text/css" media="screen" property="" />
+    <link href="{{asset('dist/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{asset('dist/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="{{asset('dist/css/flexslider.css')}}" type="text/css" media="screen" property="" />
     <!--testimonial flexslider-->
-    <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{asset('dist/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
     <!--fonts-->
     <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,800" rel="stylesheet">
@@ -68,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <h1><a href="#">Bettering</a></h1>
+                    <h1><a href="#">Village Dev</a></h1>
                 </div>
                 <!-- navbar-header -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -101,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-    <script src="{{asset('js/bootstrap.js')}}"></script>
+    <script src="{{asset('dist/js/bootstrap.js')}}"></script>
 </div>
 
 
