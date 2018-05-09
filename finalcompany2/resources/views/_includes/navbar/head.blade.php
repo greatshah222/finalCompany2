@@ -38,9 +38,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="col-md-9 top-left">
                 <ul>
-                    <li><i class="fa fa-map-marker" aria-hidden="true"></i> 1143 New York, USA</li>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i> +(010) 221 918 811</li>
-                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@example.com</a></li>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Kathmandu,Nepal</li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> +977 9841331624</li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">villagedev@mail.com</a></li>
                 </ul>
             </div>
             <div class="col-md-3 top-middle">
@@ -67,23 +67,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <h1><a href="#">Village Dev</a></h1>
+                    <h1><a href="{{url('/')}}">Village Dev</a></h1>
                 </div>
                 <!-- navbar-header -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#" class="active">Home</a></li>
+                        @if (Route::has('login'))
+                            @auth
+                                <li><a href="{{url('/home')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Auth::user()->name}} <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{url('/logout')}}">Logout</a></li>
+                                        <li><a href="#">Profiles</a></li>
+                                    </ul>
+                                </li>
+
+
+
+
+
+
+                            @else
+                                <li><a href="{{ route('login') }}">Login</a></li>
+
+                            @endauth
+                        @endif
+
                         <li><a href="#">About</a></li>
                         <li><a href="#">Gallery</a></li>
-                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Web Icons</a></li>
-                                <li><a href="#">Short Codes</a></li>
-                            </ul>
-                        </li>
+
                         <li><a href="#">Contact</a></li>
                     </ul>
+
 
                 </div>
 
@@ -102,6 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <script src="{{asset('dist/js/bootstrap.js')}}"></script>
 </div>
+
 
 
     <!--// Required Scripts -->
