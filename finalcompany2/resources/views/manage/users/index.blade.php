@@ -12,7 +12,7 @@
 
 
 
-            <a href="{{asset('manage/users/create')}}" class="btn btn-info btn-lg " role="button" aria-pressed="true">create new user</a>
+            <a href="{{asset('manage/users/create')}}" class="btn btn-info btn-lg " role="button" aria-pressed="true"><i class="fa fa-user-plus m-l-10"></i>  Create new user</a>
 
 
 
@@ -32,12 +32,14 @@
             <div class="col-md-8 pull-right  ">
 
             <hr>
-            <table class="table">
+            <table class="table table-hover table-bordered">
                 <thead>
                 <tr>
+                    <th>Id</th>
+
                     <th>Name</th>
                     <th>Email</th>
-                    <th>date Created</th>
+                    <th>Date Created</th>
 
                     <th>Actions</th>
 
@@ -45,14 +47,36 @@
                 </tr>
 
                 </thead>
-            </table>
-            </div>
+                <tbody>
+                @foreach($users as $user)
+                <tr>
+                    <th>{{$user->id}}</th>
+                    <th>{{$user->name}}</th>
 
+                    <th>{{$user->email}}</th>
+                    <th>{{$user->created_at->toFormattedDateString()}}</th>
+
+
+                    <th><a href="{{route('users.edit',$user->id)}}" class="btn btn-primary btn-sm" role="button">Edit</a> </th>
+
+                </tr>
+                    @endforeach
+                </tbody>
+            </table>
+                    <div class="col-md-offset-6 pull-right">
+                        {{$users->links()}}
+                    </div>
+
+            </div>
 
         </div>
 
+
+
     </div>
+
 </div>
+
 
 
 
