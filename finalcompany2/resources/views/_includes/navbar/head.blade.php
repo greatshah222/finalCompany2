@@ -20,7 +20,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- // Meta Tags -->
     <link href="{{asset('dist/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{asset('dist/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" media="all">
-    <link rel="stylesheet" href="{{asset('dist/css/flexslider.css')}}" type="text/css" media="screen" property="" />
+
     <!--testimonial flexslider-->
     <link href="{{asset('dist/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
     <!--fonts-->
@@ -73,13 +73,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="{{url('/')}}" class="active">Home</a></li>
                         @if (Route::has('login'))
                             @auth
                                 <li><a href="{{url('/home')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Auth::user()->name}} <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="{{url('/logout')}}">Logout</a></li>
-                                        <li><a href="#">Profiles</a></li>
+                                    <ul class="dropdown-menu" id="menu">
+                                        <li><a href="{{url('/logout')}}"><i class="fa fa-sign-out" aria-hidden="true">Logout</i>
+                                                </a></li>
+                                        <li><a href="#"><i class=" fa fa-user">Profiles</i>
+
+                                               </a></li>
+                                        <li><a href="{{asset('manage')}}"><i class="fa fa-cog">Manage</i> </a></li>
+                                        <li><a href="{{asset('manage')}}"><i class="fa fa-bell">Notification</i> </a></li>
+
+
                                     </ul>
                                 </li>
 

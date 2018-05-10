@@ -1,6 +1,15 @@
 @extends('layout.main')
 
 @section('value')
+    <section class="banner-w3ls">
+
+    <div class="banner-w3l-mk">
+
+        <div class="w3_agileits_header_text">
+            <a href="">  <h3>Donate<i class="fa fa-heart" aria-hidden="true"></i></h3></a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
 
     <!-- Features -->
     <div class="pogoSlider" id="js-main-slider">
@@ -64,7 +73,8 @@
                 </div>
             </div>
         </div>
-    </div><!-- //pogoSlider -->
+    </div>
+    </section><!-- //pogoSlider -->
 
     <div class="service" id="services">
         <div class="container">
@@ -212,7 +222,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-4 w3layouts_gallery_grid">
                     <a href="{{asset('dist/images/2.jpg')}}" class="lsb-preview" data-lsb-group="header">
                         <div class="w3layouts_news_grid">
-                            <img src="{{asset('dist/images/2.jpg')}}" alt=" " class="img-responsive">
+                            <img src="{{asset('sideimages')}}" alt=" " class="img-responsive">
                             <div class="w3layouts_news_grid_pos">
                                 <div class="wthree_text"><h3>Handout</h3></div>
                             </div>
@@ -232,7 +242,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-4 w3layouts_gallery_grid">
                     <a href="{{asset('dist/images/5.jpg')}}" class="lsb-preview" data-lsb-group="header">
                         <div class="w3layouts_news_grid">
-                            <img src="{{asset('dist/images/5.jpg')}}" alt=" " class="img-responsive">
+                            <img src="{{asset('sideimages')}}" alt=" " class="img-responsive">
                             <div class="w3layouts_news_grid_pos">
                                 <div class="wthree_text"><h3>Handout</h3></div>
                             </div>
@@ -252,7 +262,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-4 w3layouts_gallery_grid">
                     <a href="{{asset('dist/images/4.jpg')}}" class="lsb-preview" data-lsb-group="header">
                         <div class="w3layouts_news_grid">
-                            <img src="{{asset('dist/images/4.jpg')}}" alt=" " class="img-responsive">
+                            <img src="{{asset('sideimages')}}" alt=" " class="img-responsive">
                             <div class="w3layouts_news_grid_pos">
                                 <div class="wthree_text"><h3>Handout</h3></div>
                             </div>

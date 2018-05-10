@@ -1,5 +1,6 @@
 @include('_includes.navbar.head')
 
+
 <html lang="zxx">
 <head>
     <title>Handout a Society Category Bootstrap Responsive Web Template | Home :: w3layouts</title>
@@ -44,7 +45,6 @@
 
 
 @yield('value')
-
 
 
 @include('_includes.navbar.footer')

@@ -30,7 +30,7 @@
                     <a href="#"><img src="{{asset('images/fo3.jpg')}}" alt=" " class="img-responsive"></a>
                 </div>
                 <div class="agileinfo_footer_grid1">
-                    <a href="#"><img src="{{asset('images/fo4.jpg')}}" alt=" " class="img-responsive"></a>
+                    <a href="#"><img src="{{asset('sideimages')}}" alt=" " class="img-responsive"></a>
                 </div>
                 <div class="agileinfo_footer_grid1">
                     <a href="#"><img src="{{asset('images/fo5.jpg')}}" alt=" " class="img-responsive"></a>
