@@ -25,7 +25,7 @@
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" :disabled="auto_password">
+                            <input type="text" class="form-control" name="password" id="password" v-if="!auto_password" placeholder="Manually give a password to this user">
                         </div>
 
                         <button type="submit" class="btn btn-success">Create User</button>
@@ -46,6 +46,11 @@
 
 
 
+
+
+
+
 @endsection
+
 
 
