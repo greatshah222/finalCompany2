@@ -14,7 +14,14 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        //create a variable a store the variable in in form the database
+
+        $posts =Post::all();
+        return view('posts.index')->withPosts($posts);
+        // return a viewa nd padd in tyhe above
+
+
+
     }
 
     /**
@@ -77,7 +84,12 @@ return view('posts.show')->withPost($post);
      */
     public function edit($id)
     {
-        //
+        // find the post in the db and sava it as variable
+        $post= Post::find($id);
+        return view('posts.edit')->withPost($post);
+
+        // return view and pass the info
+
     }
 
     /**
@@ -89,7 +101,19 @@ return view('posts.show')->withPost($post);
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, array(
+            'title' => 'required|max:255',
+            'body' => 'required'
+        ));
+
+        // store in the db
+        $post =Post::find($id);
+        $post->title= $request->input('title');
+        $post->body= $request->input('body');
+        $post->save();
+
+        return redirect()->route('posts.show',$post->id);
+
     }
 
     /**
@@ -100,7 +124,11 @@ return view('posts.show')->withPost($post);
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+        return redirect()->route('posts.index');
+
+
     }
 
 }

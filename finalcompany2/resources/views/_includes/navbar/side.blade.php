@@ -8,14 +8,19 @@
                         General</a></li>
                 <li class="submenu">
                     <a href="#">
-                        <i class="glyphicon glyphicon-list"></i> Dashboard
+                        <i class="glyphicon glyphicon-list"></i>  Posts Dashboard
                         <span class="caret pull-right"></span>
                     </a>
                     <!-- Sub menu -->
                     <ul>
-                        <li><a href="#">View  Dashboard</a></li>
+                        <li><a href="{{asset('posts')}}">View  Posts</a></li>
 
                     </ul>
+                    <ul>
+                        <li><a href="{{asset('posts/create')}}">Create New  Posts</a></li>
+
+                    </ul>
+
 
 
 
@@ -24,13 +29,18 @@
                         Administration</a></li>
                 <li class="submenu">
                     <a href="#">
-                        <i class="glyphicon glyphicon-list"></i> Manage User
+                        <i class="glyphicon glyphicon-list"></i> Users Dashboard
                         <span class="caret pull-right"></span>
                     </a>
                     <ul>
-                        <li><a href="{{asset('manage/users  ')}}">Mangage User</a></li>
+                        <li><a href="{{asset('manage/users  ')}}">View User</a></li>
 
                     </ul>
+                    <ul>
+                        <li><a href="{{asset('manage/users/create  ')}}">Create New Users</a></li>
+
+                    </ul>
+
                     <a href="#">
                         <i class="glyphicon glyphicon-list"></i> Roles and Permission
                         <span class="caret pull-right"></span>
