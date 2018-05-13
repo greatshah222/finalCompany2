@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{asset('dist1/css/owl.carousel.css')}}" type="text/css" media="all"/> <!-- Owl-Carousel-CSS -->
     <link href="{{asset('dist1/css/lsb.css')}}" rel="stylesheet" type="text/css"> <!-- gallery-css -->
     <!-- //css files -->
-    <link href="{{asset('css/app1.css')}}" rel="stylesheet" type="text/css" media="all" /> <!-- Nav-CSS -->
+
 
     <!-- online-fonts -->
     <link href="//fonts.googleapis.com/css?family=Lobster&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
@@ -33,6 +33,8 @@
     <!-- //css files -->
     <!-- web-fonts -->
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    @yield('stylesheets')
     <!-- //web-fonts -->
     <!-- /js files -->
 </head>
@@ -106,6 +108,8 @@
 <!-- start-smoth-scrolling -->
 <!-- smooth scrolling -->
 <script src="{{asset('dist1/js/SmoothScroll.min.js')}}"></script>
+
+@yield('scripts')
 <!-- //smooth scrolling -->
 
 <!-- //js files -->

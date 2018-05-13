@@ -64,7 +64,9 @@ return redirect()->route('posts.show',$post->id);
      */
     public function show($id)
     {
-        //
+$post= Post::find($id);
+return view('posts.show')->withPost($post);
+
     }
 
     /**
