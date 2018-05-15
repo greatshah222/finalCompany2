@@ -63,6 +63,59 @@ section.banner-w3ls .banner-w3l-mk {
     width: 100%;
     padding: 0 16em;
 }
+
+.events-section {
+    background: url(../images/banner1.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+    padding: 5em 0;
+}
+
+.live-info {
+    padding: 1.5em 1.5em 3em;
+    background: #fff;
+    box-shadow: 1px 1px 17px #ffffff;
+}
+.live-info h4 {
+    font-size:24px;
+    letter-spacing: 1px;
+    color: #93c83f;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+p.para-1 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #9f9f9f;
+    text-align: center;
+    line-height: 28px;
+    margin-top: 1em;
+}
+.live-info ul {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.live-info ul li {
+    display: inline-block;
+    list-style: none;
+    color: #00030a;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.live-info ul li span {
+    display: inline-block;
+    color: #93c83f;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
 .logo-w3ls {
     float: left;
 }
@@ -2309,6 +2362,9 @@ a.w3_agile_vimeo:hover{
 	a.map-w3l-loca {
 		margin: 3.5em 0 1.5em;
 	}
+
+
+
 }
 
 

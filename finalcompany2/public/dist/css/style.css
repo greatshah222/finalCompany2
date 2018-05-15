@@ -1,7 +1,4 @@
 
-
-
-
 /*-- header --*/
 
 
@@ -11,35 +8,35 @@
 /*-- top-bar-w3layouts --*/
 
 .header {
-	position: relative;
+    position: relative;
 }
 
 .header-nav {
-	position: relative;
+    position: relative;
 }
 
 .top-bar-w3layouts {
-	width: 100%;
-	z-index: 99999;
-	background: #fff;
+    width: 100%;
+    z-index: 99999;
+    background: #fff;
 }
 
 
 /*-- Logo --*/
 
 .logo {
-	width: 60%;
-	float: left;
+    width: 60%;
+    float: left;
 }
 
 .logo a {
-	font-size: 40px;
-	font-weight: bolder;
-	color: #EEE;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #EEE;
 }
 
 .logo a:hover {
-	color: #FFF;
+    color: #FFF;
 }
 
 
@@ -49,44 +46,44 @@
 /*-- Info --*/
 
 .info {
-	width: 40%;
-	float: left;
-	padding-top: 20px;
+    width: 40%;
+    float: left;
+    padding-top: 20px;
 }
 
 .info .email,
 .info .phone {
-	width: 50%;
-	float: left;
+    width: 50%;
+    float: left;
 }
 
 .info p {
-	color: #EEE;
-	font-size: 13px;
+    color: #EEE;
+    font-size: 13px;
 }
 
 .info a {
-	color: #FFF;
+    color: #FFF;
 }
 
 .info a:hover {
-	color: #009688;
+    color: #009688;
 }
 
 .info span.glyphicon {
-	margin-right: 5px;
+    margin-right: 5px;
 }
 
 .navbar-brand {
-	line-height: 0px !important;
+    line-height: 0px !important;
 }
 
 .navbar-brand {
-	float: none;
+    float: none;
 }
 
 nav.linkEffects.linkHoverEffect_12 ul {
-	margin-top: 6px;
+    margin-top: 6px;
 }
 
 
@@ -94,11 +91,7 @@ nav.linkEffects.linkHoverEffect_12 ul {
 
 
 /*--
-
-
 .
-
-
 /*----*/
 
 
@@ -120,12 +113,12 @@ nav.linkEffects.linkHoverEffect_12 ul {
 }
 .top-left li {
     display: inline-block;
-	color:#fff;
+    color:#fff;
     margin-right: 2em;
     letter-spacing: 1px;
 }
 .top-left li a{
-	color:#fff;
+    color:#fff;
 }
 .top {
     padding: 10px 0;
@@ -135,7 +128,7 @@ nav.linkEffects.linkHoverEffect_12 ul {
     text-align: right;
 }
 .top-left p{
-	color:#fff;
+    color:#fff;
     font-size: 16px;
     margin-top: 3px;
 }
@@ -199,11 +192,11 @@ nav.linkEffects.linkHoverEffect_12 ul {
 .top-middle i.fa {
     border: 1px solid #fff;
     color: #fff;
-	transition: 0.5s all;
-	-webkit-transition: 0.5s all;
-	-moz-transition: 0.5s all;
-	-o-transition: 0.5s all;
-	-ms-transition: 0.5s all;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
 }
 /* -- //TOP HEADER */
 
@@ -211,55 +204,55 @@ nav.linkEffects.linkHoverEffect_12 ul {
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-	border-color: transparent;
+    border-color: transparent;
 }
 
 .navbar-default .navbar-brand {
-	font-size: 3em;
-	color: #FFF;
-	text-shadow: 3px 3px #000000;
-	text-decoration: none;
-	font-weight: bold;
+    font-size: 3em;
+    color: #FFF;
+    text-shadow: 3px 3px #000000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .navbar {
-	margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .navbar-nav>li {
-	float: left;
-	margin: 0px 14px;
+    float: left;
+    margin: 0px 14px;
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: #000000;
-	letter-spacing: 1px;
-	text-transform: capitalize;
-	padding: 15px 13px;
-	font-weight: 400;
-	font-size: 18px;
+    color: #000000;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding: 15px 13px;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:hover {
-	color: #fff;
-	background: none!important;
+    color: #fff;
+    background: none!important;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-	background-color: #FFF;
+    background-color: #FFF;
 }
 
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
-	background-color: #303841;
-	border-color: #000;
+    background-color: #303841;
+    border-color: #000;
 }
 
 .navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover {
-	color: #93c83f;
-	background-color: transparent;
+    color: #93c83f;
+    background-color: transparent;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
@@ -272,24 +265,24 @@ nav.linkEffects.linkHoverEffect_12 ul {
 ;
 }
 .navbar-default .navbar-nav>li>a.active {
-	color: #93c83f;
+    color: #93c83f;
 }
 
 .navbar-default {
-	border-color: #e7e7e7;
-	border: none!important;
-	background: none!important;
+    border-color: #e7e7e7;
+    border: none!important;
+    background: none!important;
 }
 
 .navbar {
-	border-radius: 0!important;
+    border-radius: 0!important;
 }
 
 .navbar-brand {
-	float: left;
-	height: 50px;
-	padding: 15px 15px;
-	line-height: 45px;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    line-height: 45px;
 }
 ul.dropdown-menu {
     top: 134%;
@@ -310,8 +303,3 @@ ul.dropdown-menu {
     text-decoration: none;
     background: black !important;
 }
-
-/*-- nav-effect --*/
-
-
-/* Effect 13: three circles */

@@ -38,7 +38,10 @@
                             <th>#</th>
 
                             <th>Title</th>
+                            <th>Slug</th>
+
                             <th>Body</th>
+
                             <th>Date Created</th>
 
                             <th>Actions</th>
@@ -54,11 +57,15 @@
                             <tr>
                                 <td>{{$post->id}}</td>
                                 <td>{{substr($post->title,0,20)}} {{strlen($post->title) > 50 ? " ..." : " "}}</td>
+                                <td>{{$post->slug}}</td>
+
+
 
                                 <td>{{substr($post->body,0,50)}} {{strlen($post->body) > 50 ? " ..." : " "}}</td>
+
                                 <td>{{$post->created_at->toFormattedDateString()}}</td>
-                                    <td><a href="{{route('posts.show',$post->id)}}" class="btn btn-default btn-sm" role="button">view</a> </td>
-                                <td><a href="{{route('posts.edit',$post->id)}}" class="btn btn-primary btn-sm" role="button">Edit</a></td>
+                                    <td><a href="{{route('posts.show',$post->id)}}" class="btn btn-default btn-sm" role="button"><i class="fa fa-eye"></i>view</a> </td>
+                                <td><a href="{{route('posts.edit',$post->id)}}" class="btn btn-primary btn-sm" role="button"><i class="fa fa-edit"></i>Edit </a></td>
 
 
 
@@ -69,6 +76,7 @@
                         </tbody>
                     </table>
                     <div class="col-md-offset-6 pull-right">
+                        {{$posts->links()}}
                     </div>
 
                 </div>
@@ -78,6 +86,7 @@
 
 
         </div>
+
 
     </div>
 
