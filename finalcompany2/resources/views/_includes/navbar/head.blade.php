@@ -101,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             @endauth
                         @endif
 
-                        <li><a href="#">About</a></li>
+                        <li><a href="{{route('blog.index')}}">Blog</a></li>
                         <li><a href="#">Gallery</a></li>
 
                         <li><a href="#">Contact</a></li>

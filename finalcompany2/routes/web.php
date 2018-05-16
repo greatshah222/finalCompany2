@@ -17,6 +17,7 @@ Route::resource('posts','PostController');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('blog/{slug}','BlogController@getSingle')->name('blog.single')->where('slug','[\w\d\-\_]+');
+    Route::get('blog','BlogController@getIndex')->name('blog.index');
 
 });
 

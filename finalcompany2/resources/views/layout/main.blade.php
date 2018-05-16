@@ -22,6 +22,7 @@
     <!-- //css files -->
 
 
+
     <!-- online-fonts -->
     <link href="//fonts.googleapis.com/css?family=Lobster&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
@@ -49,7 +50,6 @@
 @yield('value')
 
 
-@include('_includes.navbar.footer')
 
 
 
