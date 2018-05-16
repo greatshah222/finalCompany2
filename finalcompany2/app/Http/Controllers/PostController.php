@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Post;
 use App\Front;
 
@@ -33,7 +34,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $categories=Category::all();
+
+        return view('posts.create')->withCategories($categories);
     }
 
     /**
@@ -50,6 +53,7 @@ class PostController extends Controller
         $this->validate($request, array(
             'title' => 'required|max:255',
             'body' => 'required',
+            'category_id'=>'required|integer',
             'slug' => 'required|alpha_dash|min:5|max:25|unique:posts,slug'
 
         ));
@@ -59,6 +63,7 @@ class PostController extends Controller
             $post->title= $request->title;
         $post->slug= $request->slug;
         $post->body= $request->body;
+        $post->category_id=$request->category_id;
 
         $post->save();
 
@@ -92,7 +97,14 @@ return view('posts.show')->withPost($post);
     {
         // find the post in the db and sava it as variable
         $post= Post::find($id);
-        return view('posts.edit')->withPost($post);
+        $categories=Category::all();
+        $cats=array();
+        foreach ($categories as $category)
+        {
+           $cats[$category->id]  =$category->name;
+        }
+
+        return view('posts.edit')->withPost($post)->withCategories($cats);
 
         // return view and pass the info
 
@@ -113,6 +125,8 @@ return view('posts.show')->withPost($post);
         {
             $this->validate($request, array(
                 'title' => 'required|max:255',
+                'category_id'=>'required|integer',
+
                 'body' => 'required',
 
             ));
@@ -122,6 +136,8 @@ return view('posts.show')->withPost($post);
             $this->validate($request, array(
                 'title' => 'required|max:255',
                 'body' => 'required',
+                'category_id'=>'required|integer',
+
                 'slug' => 'required|alpha_dash|min:5|max:25|unique:posts,slug'
 
             ));
@@ -132,6 +148,8 @@ return view('posts.show')->withPost($post);
         $post =Post::find($id);
         $post->title= $request->input('title');
         $post->slug= $request->input('slug');
+        $post->category_id= $request->input('category_id');
+
 
         $post->body= $request->input('body');
         $post->save();

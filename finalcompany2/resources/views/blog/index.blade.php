@@ -39,7 +39,6 @@
                         <div class="blog-poast-info">
                             <ul>
                                 <li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="#"> Admin </a></li>
-                                <li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="#">{{$post->category->name }} </a></li>
 
                                 <li><i class="glyphicon glyphicon-calendar"> </i>30-12-2015</li>
                                 <li><i class="glyphicon glyphicon-comment"> </i><a class="p-blog" href="#">3 Comments </a></li>

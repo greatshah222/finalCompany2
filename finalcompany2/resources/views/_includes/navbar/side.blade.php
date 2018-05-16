@@ -42,12 +42,16 @@
                     </ul>
 
                     <a href="#">
-                        <i class="glyphicon glyphicon-list"></i> Roles and Permission
+                        <i class="glyphicon glyphicon-list"></i> Category
                         <span class="caret pull-right"></span>
                     </a>
                     <!-- Sub menu -->
                     <ul>
-                        <li><a href="#">Mangage Roles</a></li>
+                        <li><a href="{{route('categories.index')}}">View Category</a></li>
+
+                    </ul>
+                    <ul>
+                        <li><a href="#">View Category</a></li>
 
                     </ul>
 
