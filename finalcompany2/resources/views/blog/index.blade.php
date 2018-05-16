@@ -31,7 +31,7 @@
                     <div class="tc-ch">
 
                         <div class="tch-img">
-                            <a href="singlepage.html"><img src="{{asset('images/8.jpg')}}" class="img-responsive" alt=""/></a>
+                            <a href="singlepage.html"><img src="{{asset('images/10.jpg')}}" class="img-responsive" alt=""/></a>
                         </div>
                         <a class="blog blue" href="#"></a>
                         <h3><a href="#">{{$post->title}}</a></h3>
@@ -39,6 +39,8 @@
                         <div class="blog-poast-info">
                             <ul>
                                 <li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="#"> Admin </a></li>
+                                <li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="#">{{$post->category->name }} </a></li>
+
                                 <li><i class="glyphicon glyphicon-calendar"> </i>30-12-2015</li>
                                 <li><i class="glyphicon glyphicon-comment"> </i><a class="p-blog" href="#">3 Comments </a></li>
                                 <li><i class="glyphicon glyphicon-heart"> </i><a class="admin" href="#">5 favourites </a></li>
