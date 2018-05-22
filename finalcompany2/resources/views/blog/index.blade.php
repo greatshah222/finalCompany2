@@ -51,6 +51,21 @@
                     @endforeach
 
 
+                    <div class="blog-grids">
+                        <div class="blog-grid-left">
+                            <h2>View more </h2>
+                        </div>
+                        <div class="blog-grid-right" style="margin-left: 300px">
+                            {{$posts->links()}}
+
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+
+
+
 
                     <div class="clearfix"></div>
 

@@ -64,7 +64,7 @@
         </div>
         <!-- copyright -->
         <div class="w3agile_footer_copy">
-            <p>jfn</p>
+            <p>Village Dev</p>
         </div>
         <!-- //copyright -->
         <!-- newsletter -->

@@ -20,6 +20,39 @@
                         <li><a href="{{asset('posts/create')}}">Create New  Posts</a></li>
 
                     </ul>
+                <li class="submenu">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-list"></i>  Category
+                        <span class="caret pull-right"></span>
+                    </a>
+                    <!-- Sub menu -->
+                    <ul>
+                        <li><a href="{{route('categories.index')}}">View Category</a></li>
+
+                    </ul>
+
+
+
+
+
+                </li>
+                <li class="submenu">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-list"></i>  Tags
+                        <span class="caret pull-right"></span>
+                    </a>
+                    <!-- Sub menu -->
+                    <ul>
+                        <li><a href="{{route('tags.index')}}">View tags</a></li>
+
+                    </ul>
+
+
+
+
+
+                </li>
+
 
 
 
@@ -41,23 +74,13 @@
 
                     </ul>
 
-                    <a href="#">
-                        <i class="glyphicon glyphicon-list"></i> Category
-                        <span class="caret pull-right"></span>
-                    </a>
-                    <!-- Sub menu -->
-                    <ul>
-                        <li><a href="{{route('categories.index')}}">View Category</a></li>
 
-                    </ul>
-                    <ul>
-                        <li><a href="#">View Category</a></li>
 
-                    </ul>
 
 
 
                 </li>
+
 
             </ul>
         </div>

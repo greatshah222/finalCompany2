@@ -17,9 +17,7 @@
             <div class="pogoSlider-slide-element">
                 <div class="container">
                     <h3>They are Humans as Well</h3>
-                    <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
                     <ul class="banner-agileits">
-                        <li><a href="#readmore" class="link-w3l1" data-toggle="modal">Read More</a></li>
                         <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
                     </ul>
                     <a href="#about" class="btn btn-circle scroll">
@@ -32,9 +30,7 @@
             <div class="pogoSlider-slide-element">
                 <div class="container">
                     <h3>Together We Can Stop poverty!</h3>
-                    <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
                     <ul class="banner-agileits">
-                        <li><a href="#readmore" class="link-w3l1" data-toggle="modal">Read More</a></li>
                         <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
                     </ul>
                     <a href="#about" class="btn btn-circle scroll">
@@ -47,9 +43,7 @@
             <div class="pogoSlider-slide-element">
                 <div class="container">
                     <h3>We Can Make Smile!</h3>
-                    <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
                     <ul class="banner-agileits">
-                        <li><a href="#readmore" class="link-w3l1" data-toggle="modal">Read More</a></li>
                         <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
                     </ul>
                     <a href="#about" class="btn btn-circle scroll">
@@ -62,9 +56,7 @@
             <div class="pogoSlider-slide-element">
                 <div class="container">
                     <h3>Education For Every Kid!</h3>
-                    <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
                     <ul class="banner-agileits">
-                        <li><a href="#readmore" class="link-w3l1" data-toggle="modal">Read More</a></li>
                         <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
                     </ul>
                     <a href="#about" class="btn btn-circle scroll">
@@ -89,21 +81,18 @@
                         <a href="#set-6" class="hi-icon fa fa-graduation-cap"></a>
                     </div>
                     <h5>Charity for Education</h5>
-                    <p>Sed ut perspiciis iste natus error sit voluptatem accusantium.</p>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-4 service-box wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".3s">
                     <div class=" hi-icon-effect-6">
                         <a href="#set-6" class="hi-icon fa fa-gratipay"></a>
                     </div>
                     <h5>Help Little Hands</h5>
-                    <p>Sed ut perspiciis iste natus error sit voluptatem accusantium.</p>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-4  service-box wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".3s">
                     <div class=" hi-icon-effect-6">
                         <a href="#set-6" class="hi-icon fa fa-child"></a>
                     </div>
-                    <h5>Save Children</h5>
-                    <p>Sed ut perspiciis iste natus error sit voluptatem accusantium.</p>
+                    <h5>Agricultural and Rural Development</h5>
                 </div>
                 <div class="clearfix"> </div>
             </div>
@@ -113,21 +102,18 @@
                         <a href="#set-6" class="hi-icon fa fa-gift"></a>
                     </div>
                     <h5>Donate for Children</h5>
-                    <p>Sed ut perspiciis iste natus error sit voluptatem accusantium.</p>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-4 service-box wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s">
                     <div class=" hi-icon-effect-6">
                         <a href="#set-6" class="hi-icon fa fa-bullhorn"></a>
                     </div>
-                    <h5>Give Scholarship</h5>
-                    <p>Sed ut perspiciis iste natus error sit voluptatem accusantium.</p>
+                    <h5>Drug Addiction Awareness Program  </h5>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-4 service-box wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s">
                     <div class=" hi-icon-effect-6">
                         <a href="#set-6" class="hi-icon fa fa-medkit"></a>
                     </div>
                     <h5>Health and Medication</h5>
-                    <p>Sed ut perspiciis iste natus error sit voluptatem accusantium.</p>
                 </div>
                 <div class="clearfix"> </div>
             </div>
@@ -152,6 +138,8 @@
 
                     <ul>
                         <li><span class="fa fa-calendar-o" aria-hidden="true"></span> {{$post->created_at->toFormattedDateString()}}</li>
+                        <a href="{{url('blog/'.$post->slug)}}">  <li> <button class="btn btn-info" style="margin-left: 30px">Read More</button></li></a>
+
                     </ul>
 
                     <h4>    {{substr($post->title,0,20)}} {{strlen($post->title) > 20 ? " ..." : " "}}
@@ -162,6 +150,13 @@
                 </div>
 
             </div>
+
+
+
+
+
+
+
 
             @endforeach
 
@@ -423,20 +418,12 @@
     <!-- mail -->
 
     <!-- map -->
-    <div class="map" id="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555"></iframe>
-        <div class="map-pos">
-            <h2>Address</h2>
-            <p>987, Morris Park.</p>
-            <p>Newyork City.</p>
-            <p>Call : 123 456 7890</p>
-        </div>
-    </div>
+
     <!-- //map -->
     <!-- Contact-form -->
 
     <!-- //Contact-form -->
     <!-- footer -->
-
+    @include('_includes.navbar.footer')
 
 @endsection

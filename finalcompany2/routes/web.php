@@ -22,6 +22,8 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::resource('categories','CategoryController',['except'=>['create']]);
+Route::resource('tags','TagController',['except'=>['create']]);
+
 
 
 Route::get('/home', 'HomeController@index')->name('home');

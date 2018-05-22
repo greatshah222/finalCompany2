@@ -7,26 +7,7 @@
                     <h1 class="title">All Posts</h1>
                 </div>
 
-                <div class="col-md-1 pull-right ">
-
-
-
-
-                    <a href="{{asset('posts/create')}}" class="btn btn-info btn-lg " role="button" aria-pressed="true"><i class="fa fa-user-plus m-l-10"></i>  Create new posts</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                </div>
+                '
                 <br>
                 <br><br><br>
                 <div class="col-md-10 pull-right  ">
