@@ -182,6 +182,7 @@ return view('posts.show')->withPost($post);
     public function destroy($id)
     {
         $post = Post::find($id);
+        $post->tags()->detach();
         $post->delete();
         return redirect()->route('posts.index');
 
