@@ -19,6 +19,8 @@
     <link href="{{asset('dist1/css/nav.css')}}" rel="stylesheet" type="text/css" media="all" /> <!-- Nav-CSS -->
     <link rel="stylesheet" href="{{asset('dist1/css/owl.carousel.css')}}" type="text/css" media="all"/> <!-- Owl-Carousel-CSS -->
     <link href="{{asset('dist1/css/lsb.css')}}" rel="stylesheet" type="text/css"> <!-- gallery-css -->
+
+
     <!-- //css files -->
 
 
@@ -35,7 +37,6 @@
     <!-- web-fonts -->
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
-    @yield('stylesheets')
     <!-- //web-fonts -->
     <!-- /js files -->
 </head>
@@ -96,6 +97,7 @@
 <!-- //Owl-Carousel-JavaScript -->
 <!-- start-smoth-scrolling -->
 <script type="text/javascript" src="{{asset('dist1/js/move-top.js')}}"></script>
+
 <script type="text/javascript" src="{{asset('dist1/js/easing.js')}}"></script>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
@@ -109,7 +111,6 @@
 <!-- smooth scrolling -->
 <script src="{{asset('dist1/js/SmoothScroll.min.js')}}"></script>
 
-@yield('scripts')
 <!-- //smooth scrolling -->
 
 <!-- //js files -->

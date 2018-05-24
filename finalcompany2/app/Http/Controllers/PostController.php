@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Post;
 use App\Front;
+use App\Tag;
 
 use Illuminate\Http\Request;
 
@@ -35,8 +36,9 @@ class PostController extends Controller
     public function create()
     {
         $categories=Category::all();
+        $tags=Tag::all();
 
-        return view('posts.create')->withCategories($categories);
+        return view('posts.create')->withCategories($categories)->withTags($tags);
     }
 
     /**
@@ -47,6 +49,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
         // validate first company2
         // redirect wherever u wish
 
@@ -57,22 +60,25 @@ class PostController extends Controller
             'slug' => 'required|alpha_dash|min:5|max:25|unique:posts,slug'
 
         ));
-
-            // store in the db
-            $post =new Post;
-            $post->title= $request->title;
+        $post =new Post;
+        $post->title= $request->title;
         $post->slug= $request->slug;
         $post->body= $request->body;
         $post->category_id=$request->category_id;
 
         $post->save();
+        $post->tags()->sync($request->tags,false);
 
-return redirect()->route('posts.show',$post->id);
+        return redirect()->route('posts.show',$post->id);
 
+
+
+        // store in the db
 
 
 
     }
+
 
     /**
      * Display the specified resource.
@@ -97,14 +103,19 @@ return view('posts.show')->withPost($post);
     {
         // find the post in the db and sava it as variable
         $post= Post::find($id);
+        $tags=Tag::all();
         $categories=Category::all();
         $cats=array();
         foreach ($categories as $category)
         {
            $cats[$category->id]  =$category->name;
         }
+        $tags2 =array();
+        foreach ($tags as $tag){
+            $tags2[$tag->id] =$tag->name;
+        }
 
-        return view('posts.edit')->withPost($post)->withCategories($cats);
+        return view('posts.edit')->withPost($post)->withCategories($cats)->withTags($tags2);
 
         // return view and pass the info
 
@@ -146,6 +157,7 @@ return view('posts.show')->withPost($post);
 
         // store in the db
         $post =Post::find($id);
+
         $post->title= $request->input('title');
         $post->slug= $request->input('slug');
         $post->category_id= $request->input('category_id');
@@ -153,8 +165,11 @@ return view('posts.show')->withPost($post);
 
         $post->body= $request->input('body');
         $post->save();
+        $post->tags()->sync($request->tags,true);
+
 
         return redirect()->route('posts.show',$post->id);
+
 
     }
 

@@ -23,6 +23,14 @@
 
                         </dl>
                         <dl class="dl-horizontal">
+                            <dt> Tags</dt>
+                            <dd> @foreach($post->tags as $tag)
+                                    <span class="label label-default">{{$tag->name}}</span>
+                                      @endforeach
+                            </dd>
+
+                        </dl>
+                        <dl class="dl-horizontal">
                             <dt> created At:</dt>
                             <dd> {{ date('M j, Y H:ia',strtotime($post->created_at))}}</dd>
 

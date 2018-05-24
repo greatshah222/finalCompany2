@@ -1,5 +1,8 @@
+<link href="{{asset('css/select2.min.css')}}" rel="stylesheet" type="text/css" media="all" /> <!-- Nav-CSS -->
 
 @section('title','| Create New Post')
+
+
 
 
 
@@ -35,6 +38,16 @@
 
                     </select>
 
+                    {{Form::label('tags','Tags:')}}
+                    <select class="form-control select2-multi" name="tags[]" multiple="multiple">
+                        @foreach($tags as $tag)
+                            <option value="{{$tag->id}}">{{$tag->name}}</option>
+                        @endforeach
+
+                    </select>
+
+
+
                     {{Form::label('body','Post Body:')}}
                     {{Form::textarea('body',null,array('class'=>'form-control','required'=>''))}}
 
@@ -69,8 +82,16 @@
 
 
 
+    <script src="{{asset('js/select2.min.js')}}"></script>
 
+<script>
+
+    $(document).ready(function() {
+        $('.select2-multi').select2();
+    });
+</script>
 @endsection
+
 
 
 

@@ -1,3 +1,4 @@
+<link href="{{asset('css/select2.min.css')}}" rel="stylesheet" type="text/css" media="all" /> <!-- Nav-CSS -->
 
 @section('title','| Create New Post')
 
@@ -29,6 +30,8 @@
                     {{Form::text('slug',null,array('class'=>'form-control'))}}
                     {{Form::label('category_id','Category:')}}
                     {{Form::select('category_id',$categories,null,['class'=>'form-control'])}}
+                    {{Form::label('tags','Tags:')}}
+                    {{Form::select('tags[]',$tags,null,['class'=>' form-control select2-multi','multiple'=>'multiple'])}}
 
 
                     {{Form::label('body','Post Body:')}}
@@ -60,7 +63,14 @@
 
 
 
+    <script src="{{asset('js/select2.min.js')}}"></script>
 
+    <script>
+
+        $(document).ready(function() {
+            $('.select2-multi').select2();
+        });
+    </script>
 
 @endsection
 

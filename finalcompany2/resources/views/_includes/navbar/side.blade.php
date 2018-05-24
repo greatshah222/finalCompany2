@@ -1,5 +1,6 @@
 <link href="{{asset('dist/css/admin.css')}}" rel="stylesheet" type="text/css" media="all" /> <!-- Nav-CSS -->
 
+
     <div class="col-md-2">
         <div class="sidebar content-box" style="display: block;">
             <ul class="nav">

@@ -21,6 +21,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="{{asset('dist/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{asset('dist/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" media="all">
 
+
     <!--testimonial flexslider-->
     <link href="{{asset('dist/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
     <!--fonts-->
@@ -124,6 +125,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
     <script src="{{asset('dist/js/bootstrap.js')}}"></script>
+
 </div>
 
 

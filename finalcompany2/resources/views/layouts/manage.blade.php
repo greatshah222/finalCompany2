@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'manage') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="{{asset('dist1/css/owl.carousel.css')}}" type="text/css" media="all"/> <!-- Owl-Carousel-CSS -->
     <link href="{{asset('dist1/css/lsb.css')}}" rel="stylesheet" type="text/css"> <!-- gallery-css -->
     <!-- //css files -->
-    <link href="{{asset('css/app1.css')}}" rel="stylesheet" type="text/css" media="all" /> <!-- Nav-CSS -->
     <link href="{{asset('dist/css/styleform.css')}}" rel="stylesheet" type="text/css" media="all" /> <!-- Nav-CSS -->
 
 
@@ -45,7 +44,6 @@
 
 </head>
 <body>
-<div id="app">
     @include('_includes.navbar.head')
 
 
@@ -55,7 +53,6 @@
         @yield('content')
     </main>
 
-</div>
 
 
 </body>
