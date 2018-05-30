@@ -7,6 +7,8 @@ use App\Post;
 use App\Front;
 use App\Tag;
 
+use Illuminate\Support\Facades\Storage;
+use Image;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -57,6 +59,7 @@ class PostController extends Controller
             'title' => 'required|max:255',
             'body' => 'required',
             'category_id'=>'required|integer',
+            'featured'=>'sometimes|image',
             'slug' => 'required|alpha_dash|min:5|max:25|unique:posts,slug'
 
         ));
@@ -65,6 +68,17 @@ class PostController extends Controller
         $post->slug= $request->slug;
         $post->body= $request->body;
         $post->category_id=$request->category_id;
+
+        if($request->hasFile('featured'))
+        {
+            $image = $request->file('featured');
+            $filename =time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('postimages/' .$filename);
+            Image::make($image)->resize(640,426)->save($location);
+            $post->featured =$filename;
+
+
+        }
 
         $post->save();
         $post->tags()->sync($request->tags,false);
@@ -110,6 +124,7 @@ return view('posts.show')->withPost($post);
         {
            $cats[$category->id]  =$category->name;
         }
+
         $tags2 =array();
         foreach ($tags as $tag){
             $tags2[$tag->id] =$tag->name;
@@ -130,29 +145,18 @@ return view('posts.show')->withPost($post);
      */
     public function update(Request $request, $id)
     {
-        $post =Post::find($id);
-        if ($request->input('slug')==$post->slug )
+        $post = Post::find($id);
 
-        {
-            $this->validate($request, array(
-                'title' => 'required|max:255',
-                'category_id'=>'required|integer',
-
-                'body' => 'required',
-
-            ));
-
-        } else
-        {
             $this->validate($request, array(
                 'title' => 'required|max:255',
                 'body' => 'required',
                 'category_id'=>'required|integer',
+                'featured'=>'image',
 
-                'slug' => 'required|alpha_dash|min:5|max:25|unique:posts,slug'
+                'slug' => "required|alpha_dash|min:5|max:25|unique:posts,slug,$id"
 
             ));
-        }
+
 
 
         // store in the db
@@ -164,6 +168,19 @@ return view('posts.show')->withPost($post);
 
 
         $post->body= $request->input('body');
+
+        if($request->hasFile('featured'))
+        {
+            $image = $request->file('featured');
+            $filename =time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('postimages/' .$filename);
+            Image::make($image)->resize(640,426)->save($location);
+
+            $oldFileName=$post->featured;
+            $post->featured =$filename;
+            Storage::delete($oldFileName);
+
+        }
         $post->save();
         $post->tags()->sync($request->tags,true);
 
@@ -182,11 +199,38 @@ return view('posts.show')->withPost($post);
     public function destroy($id)
     {
         $post = Post::find($id);
-        $post->tags()->detach();
         $post->delete();
         return redirect()->route('posts.index');
 
 
     }
+    public function trashed()
+    {
+
+        $post = Post::onlyTrashed()->get();
+
+        return view('posts.trashed')->with('posts',$post);
+    }
+    public function kill($id)
+    {
+        $post =Post::withTrashed()->where('id',$id)->first();
+        $post->tags()->detach();
+
+        $post->forceDelete();
+        return redirect()->route('posts.trashed');
+
+
+
+    }
+
+    public function restore($id)
+    {
+        $post =Post::withTrashed()->where('id',$id)->first();
+        $post->restore();
+        return redirect()->route('posts.trashed');
+
+
+    }
+
 
 }

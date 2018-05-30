@@ -4,7 +4,7 @@
             @extends('layouts.manage')
             <div class="row">
                 <div class="col-md-10 ">
-                    <h1 class="title">All Posts</h1>
+                    <h1 class="title">Trashed Posts</h1>
                 </div>
 
                 '
@@ -15,23 +15,19 @@
                     <hr>
                     <table class="table table-hover table-striped">
                         <thead>
-                        <tr class="table-info">
+                        <tr  class="table-bordered table-info">
                             <th>#</th>
 
                             <th>Title</th>
                             <th>Slug</th>
-                            <th>iamd</th>
-
+                            <th>Image</th>
 
                             <th>Body</th>
 
-                            <th>Date Created</th>
-                            <th></th>
-
+                            <th>Date Deleted</th>
 
                             <th>Actions</th>
                             <th></th>
-
 
 
 
@@ -53,14 +49,9 @@
 
                                 <td>{{substr($post->body,0,50)}} {{strlen($post->body) > 50 ? " ..." : " "}}</td>
 
-                                <td>{{$post->created_at->toFormattedDateString()}}</td>
-                                    <td><a href="{{route('posts.show',$post->id)}}" class="btn btn-default btn-sm" role="button"><i class="fa fa-eye"></i>view</a> </td>
-                                <td><a href="{{route('posts.edit',$post->id)}}" class="btn btn-primary btn-sm" role="button"><i class="fa fa-edit"></i>Edit </a></td>
-                                <td>  {!! Form::open(['route'=>['posts.destroy', $post->id],'method'=>'DELETE']) !!}
-                                    {!! Form::submit('Trash',['class'=>'btn btn-danger btn-sm']) !!}
-                                    {!! Form::close() !!}
-                                 </td>
-
+                                <td>{{$post->deleted_at->toFormattedDateString()}}</td>
+                                <td><a href="{{route('posts.restore',$post->id)}}" class="btn btn-success btn-xs" role="button"><i class="fa fa-undo"></i>Restore</a> </td>
+                                <td><a href="{{route('posts.kill',$post->id)}}" class="btn btn-danger btn-xs" role="button"><i class="fa fa-trash"></i>Delete </a></td>
 
 
 
@@ -70,9 +61,7 @@
                         @endforeach
                         </tbody>
                     </table>
-                    <div class="col-md-offset-6 pull-right">
-                        {{$posts->links()}}
-                    </div>
+
 
                 </div>
 

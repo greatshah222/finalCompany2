@@ -24,7 +24,7 @@
                 <div class="tc-ch">
 
                     <div class="tch-img">
-                        <a href="singlepage.html"><img src="{{asset('images/8.jpg')}}" class="img-responsive" alt=""/></a>
+                        <a href="{{asset('postimages/'.$post->featured)}}"><img src="{{asset('postimages/'.$post->featured)}}" class="img-responsive" alt="djsb"/></a>
                     </div>
                     <a class="blog blue" href="#"></a>
                     <h3><a href="#">{{$post->title}}</a></h3>

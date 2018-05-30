@@ -36,6 +36,8 @@
                 <thead>
                 <tr>
                     <th>Id</th>
+                    <th>Avatar</th>
+
 
                     <th>Name</th>
                     <th>Email</th>
@@ -51,6 +53,8 @@
                 @foreach($users as $user)
                 <tr>
                     <th>{{$user->id}}</th>
+                    <th><img src="{{asset($user->profile->avatar)}}" width="100px" height="70px" style="border-radius: 50%;"></th>
+
                     <th>{{$user->name}}</th>
 
                     <th>{{$user->email}}</th>

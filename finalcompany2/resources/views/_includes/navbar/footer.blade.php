@@ -21,22 +21,22 @@
             <div class="col-md-3 agileinfo_footer_grid f1">
                 <h4>Instagram Posts</h4>
                 <div class="agileinfo_footer_grid1">
-                    <a href="#"><img src="{{asset('images/fo1.jpg')}}" alt=" " class="img-responsive"></a>
+                    <a href="#"><img src="{{asset('galleryimages/fo1.jpg')}}" alt=" " class="img-responsive"></a>
                 </div>
                 <div class="agileinfo_footer_grid1">
-                    <a href="#"><img src="{{asset('images/fo2.jpg')}}" alt=" " class="img-responsive"></a>
+                    <a href="#"><img src="{{asset('galleryimages/fo2.jpg')}}" alt=" " class="img-responsive"></a>
                 </div>
                 <div class="agileinfo_footer_grid1">
-                    <a href="#"><img src="{{asset('images/fo3.jpg')}}" alt=" " class="img-responsive"></a>
+                    <a href="#"><img src="{{asset('galleryimages/fo3.jpg')}}" alt=" " class="img-responsive"></a>
                 </div>
                 <div class="agileinfo_footer_grid1">
-                    <a href="#"><img src="{{asset('sideimages')}}" alt=" " class="img-responsive"></a>
+                    <a href="#"><img src="{{asset('galleryimages/fo4.jpg')}}" alt=" " class="img-responsive"></a>
                 </div>
                 <div class="agileinfo_footer_grid1">
-                    <a href="#"><img src="{{asset('images/fo5.jpg')}}" alt=" " class="img-responsive"></a>
+                    <a href="#"><img src="{{asset('galleryimages/fo5.jpg')}}" alt=" " class="img-responsive"></a>
                 </div>
                 <div class="agileinfo_footer_grid1">
-                    <a href="#"><img src="{{asset('images/fo6.jpg')}}" alt=" " class="img-responsive"></a>
+                    <a href="#"><img src="{{asset('galleryimages/fo6.jpg')}}" alt=" " class="img-responsive"></a>
                 </div>
                 <div class="clearfix"> </div>
             </div>

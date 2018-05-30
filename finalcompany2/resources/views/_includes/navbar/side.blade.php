@@ -21,6 +21,10 @@
                         <li><a href="{{asset('posts/create')}}">Create New  Posts</a></li>
 
                     </ul>
+                    <ul>
+                        <li><a href="{{asset('posts/trashed')}}">Trashed Posts</a></li>
+
+                    </ul>
                 <li class="submenu">
                     <a href="#">
                         <i class="glyphicon glyphicon-list"></i>  Category

@@ -22,7 +22,7 @@
                 <div class="col-md-10 pull-right  ">
 
                     <hr>
-                    {!! Form::model($post,array('route' => array('posts.update',$post->id),'method'=>'PUT')) !!}
+                    {!! Form::model($post,array('route' => array('posts.update',$post->id),'method'=>'PUT','files'=>true)) !!}
 
                     {{Form::label('title','Title:')}}
                     {{Form::text('title',null,array('class'=>'form-control'))}}
@@ -32,6 +32,10 @@
                     {{Form::select('category_id',$categories,null,['class'=>'form-control'])}}
                     {{Form::label('tags','Tags:')}}
                     {{Form::select('tags[]',$tags,null,['class'=>' form-control select2-multi','multiple'=>'multiple'])}}
+                    <br><br>
+                    {{Form::label('featured','Featured Image:')}}
+                    {{Form::file('featured')}}
+                    <br>
 
 
                     {{Form::label('body','Post Body:')}}

@@ -20,16 +20,17 @@
 
 
                 <br>
-                <br><br><br>
+                <br><
                 <div class="col-md-10 pull-right  ">
 
                     <hr>
-                    {!! Form::open(array('route' => 'posts.store')) !!}
+                    {!! Form::open(array('route' => 'posts.store','files'=>true)) !!}
 
                     {{Form::label('title','Title:')}}
                     {{Form::text('title',null,array('class'=>'form-control','required'=>''))}}
                     {{Form::label('slug','Slug:')}}
                     {{Form::text('slug',null,array('class'=>'form-control','required'=>' ', 'minlength'=>'5', 'maxlength'=>'25'))}}
+
                     {{Form::label('category_id','Category:')}}
                     <select class="form-control" name="category_id">
                         @foreach($categories as $category)
@@ -45,6 +46,10 @@
                         @endforeach
 
                     </select>
+                    <br>
+                    {{Form::label('featured','Image:')}}
+                    {{Form::file('featured',null,array('class'=>'form-control'))}}
+                    <br>
 
 
 

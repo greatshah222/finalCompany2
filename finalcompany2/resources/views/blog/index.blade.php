@@ -31,14 +31,14 @@
                     <div class="tc-ch">
 
                         <div class="tch-img">
-                            <a href="singlepage.html"><img src="{{asset('images/10.jpg')}}" class="img-responsive" alt=""/></a>
+                            <a href="{{asset('postimages/'.$post->featured)}}"><img src="{{asset('postimages/'.$post->featured)}}" class="img-responsive" alt="djsb"/></a>
                         </div>
                         <a class="blog blue" href="#"></a>
                         <h3><a href="#">{{$post->title}}</a></h3>
                         {{substr($post->body,0,200)}} {{strlen($post->body) > 200 ? " ..." : " "}}
                         <div class="blog-poast-info">
                             <ul>
-                                <li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="#"> Admin </a></li>
+                                <li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="#">admin</a></li>
 
                                 <li><i class="glyphicon glyphicon-calendar"> </i>30-12-2015</li>
                                 <li><i class="glyphicon glyphicon-comment"> </i><a class="p-blog" href="#">3 Comments </a></li>

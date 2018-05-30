@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Profile;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -51,7 +52,12 @@ return view('manage.users.create');
        $user->name=$request->name;
         $user->email=$request->email;
         $user->password=Hash::make($password);
+
         $user->save();
+        $profile =new Profile();
+        $profile->user_id=$user->id;
+$profile->avatar='avatar/2.jpg';
+$profile->save();
 
 
 if($user->save())
@@ -126,5 +132,12 @@ else{
     public function destroy($id)
     {
         //
+    }
+    public function profile()
+    {
+        $users=User::all();
+
+        return view('manage.users.usersprofile')->withusers($users);
+
     }
 }

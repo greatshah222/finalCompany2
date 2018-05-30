@@ -18,7 +18,8 @@
     <link href="{{asset('dist1/css/pogo-slider.min.css')}}" rel="stylesheet" type="text/css" media="all" /> <!-- Banner-Slider-CSS -->
     <link href="{{asset('dist1/css/nav.css')}}" rel="stylesheet" type="text/css" media="all" /> <!-- Nav-CSS -->
     <link rel="stylesheet" href="{{asset('dist1/css/owl.carousel.css')}}" type="text/css" media="all"/> <!-- Owl-Carousel-CSS -->
-    <link href="{{asset('dist1/css/lsb.css')}}" rel="stylesheet" type="text/css"> <!-- gallery-css -->
+    <link href="{{asset('dist1/css/lsb.css')}}" rel="stylesheet" type="text/css">
+
 
 
     <!-- //css files -->
