@@ -81,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <ul class="dropdown-menu" id="menu">
                                         <li><a href="{{url('/logout')}}"><i class="fa fa-sign-out" aria-hidden="true">Logout</i>
                                                 </a></li>
-                                        <li><a href="#"><i class=" fa fa-user">Profiles</i>
+                                        <li><a href="{{asset('profile')}}"><i class=" fa fa-user">Profiles</i>
 
                                                </a></li>
                                         <li><a href="{{asset('manage')}}"><i class="fa fa-cog">Manage</i> </a></li>

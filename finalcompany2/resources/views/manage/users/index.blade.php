@@ -32,9 +32,9 @@
             <div class="col-md-8 pull-right  ">
 
             <hr>
-            <table class="table table-hover table-bordered">
+            <table class="table table-hover table-striped ">
                 <thead>
-                <tr>
+                <tr class="success">
                     <th>Id</th>
                     <th>Avatar</th>
 
@@ -44,6 +44,7 @@
                     <th>Date Created</th>
 
                     <th>Actions</th>
+                    <th></th>
 
 
                 </tr>
@@ -53,7 +54,8 @@
                 @foreach($users as $user)
                 <tr>
                     <th>{{$user->id}}</th>
-                    <th><img src="{{asset($user->profile->avatar)}}" width="100px" height="70px" style="border-radius: 50%;"></th>
+                    <th><img src="{{asset($user->profile->avatar)}}" height="75px" width="100px"></th>
+
 
                     <th>{{$user->name}}</th>
 
@@ -62,6 +64,14 @@
 
 
                     <th><a href="{{route('users.edit',$user->id)}}" class="btn btn-primary btn-sm" role="button">Edit</a> </th>
+                    <th>
+                        @if($user->admin)
+                            <a href="{{route('users.not.admin',$user->id)}}" class="btn btn-danger btn-sm" role="button">Remove admin</a>
+                            @else
+                        <a href="{{route('users.admin',$user->id)}}" class="btn btn-success btn-sm" role="button">make Admin</a>
+                            @endif
+                    </th>
+
 
                 </tr>
                     @endforeach

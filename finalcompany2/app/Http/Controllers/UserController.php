@@ -19,6 +19,8 @@ class UserController extends Controller
 
     {
         $users=User::orderBy('id','desc')->paginate(5);
+
+
         return view('manage.users.index')->withusers($users);
     }
 
@@ -45,23 +47,33 @@ return view('manage.users.create');
             'email'=>'required|email|unique:users',
 
         ]);
+$user =User::create([
+    'name'=>$request->name,
+    'email'=>$request->email,
+    'password'=>bcrypt('password')
 
-    $password =trim($request->password);
+]);
 
-       $user=new User();
-       $user->name=$request->name;
-        $user->email=$request->email;
-        $user->password=Hash::make($password);
+   $profile = Profile::create([
+       'user_id'=>$user->id
 
-        $user->save();
-        $profile =new Profile();
-        $profile->user_id=$user->id;
-$profile->avatar='avatar/2.jpg';
-$profile->save();
+   ]);
 
 
-if($user->save())
+
+
+
+
+
+
+
+
+
+
+
+        if($user->save() || ($profile->save()))
 {
+
     return redirect()->route('users.show',$user->id);
 }
 else{
@@ -137,7 +149,23 @@ else{
     {
         $users=User::all();
 
-        return view('manage.users.usersprofile')->withusers($users);
+        return view('manage.users.profile')->withUser($users);
 
+    }
+    public function admin($id)
+    {
+        $users =User::find($id);
+        $users->admin=1;
+        $users->save();
+        return redirect()->back();
+    }
+
+
+    public function not_admin($id)
+    {
+        $user =User::find($id);
+        $user->admin=0;
+        $user->save();
+        return redirect()->back();
     }
 }
