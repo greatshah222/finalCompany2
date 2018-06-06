@@ -42,6 +42,8 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Date Created</th>
+                    <th></th>
+
 
                     <th>Actions</th>
                     <th></th>
@@ -63,14 +65,30 @@
                     <th>{{$user->created_at->toFormattedDateString()}}</th>
 
 
-                    <th><a href="{{route('users.edit',$user->id)}}" class="btn btn-primary btn-sm" role="button">Edit</a> </th>
                     <th>
                         @if($user->admin)
                             <a href="{{route('users.not.admin',$user->id)}}" class="btn btn-danger btn-sm" role="button">Remove admin</a>
-                            @else
-                        <a href="{{route('users.admin',$user->id)}}" class="btn btn-success btn-sm" role="button">make Admin</a>
-                            @endif
+                        @else
+                            <a href="{{route('users.admin',$user->id)}}" class="btn btn-success btn-sm" role="button">make Admin</a>
+                        @endif
                     </th>
+                    <th><a href="{{route('users.edit',$user->id)}}" class="btn btn-primary btn-sm" role="button">Edit</a> </th>
+
+                    <th>@if(Auth::id() !== $user->id )
+                            {!! Form::open(['route'=>['users.destroy', $user->id],'method'=>'DELETE']) !!}
+                            {!! Form::submit('Delete',['class'=>'btn btn-danger btn-sm']) !!}
+                            {!! Form::close() !!}
+
+
+                        @endif
+
+
+
+
+                    </th>
+
+
+
 
 
                 </tr>

@@ -1,4 +1,16 @@
 <link href="{{asset('css/select2.min.css')}}" rel="stylesheet" type="text/css" media="all" /> <!-- Nav-CSS -->
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+<script>tinymce.init(
+        {
+            selector:'textarea',
+          plugins:'link code',
+            menubar:false
+
+
+        });
+    </script>
+
+
 
 @section('title','| Create New Post')
 
@@ -19,9 +31,8 @@
 
 
 
-                <br>
-                <br><
-                <div class="col-md-10 pull-right  ">
+
+                <div class="col-md-7 col-md-offset-2  ">
 
                     <hr>
                     {!! Form::open(array('route' => 'posts.store','files'=>true)) !!}
@@ -29,7 +40,7 @@
                     {{Form::label('title','Title:')}}
                     {{Form::text('title',null,array('class'=>'form-control','required'=>''))}}
                     {{Form::label('slug','Slug:')}}
-                    {{Form::text('slug',null,array('class'=>'form-control','required'=>' ', 'minlength'=>'5', 'maxlength'=>'25'))}}
+                    {{Form::text('slug',null,array('class'=>'form-control','required'=>' ', 'minlength'=>'5', 'maxlength'=>'25','placeholder'=>"This is automatic field on the basis of your title"))}}
 
                     {{Form::label('category_id','Category:')}}
                     <select class="form-control" name="category_id">
@@ -54,7 +65,7 @@
 
 
                     {{Form::label('body','Post Body:')}}
-                    {{Form::textarea('body',null,array('class'=>'form-control','required'=>''))}}
+                    {{Form::textarea('body',null,array('class'=>'form-control'))}}
 
                     {{Form::submit('Create Post',array('class'=>'btn btn-success btn-lg btn-block','style'=>'margin-top:20px;'))}}
 
@@ -78,6 +89,8 @@
         </div>
 
     </div>
+    @include('_includes.navbar.footer')
+
 
 
 
@@ -94,7 +107,20 @@
     $(document).ready(function() {
         $('.select2-multi').select2();
     });
+    $('#title').on('blur',function () {
+        var theTitle = this.value.toLowerCase().trim(),
+            slugInput = $('#slug');
+        theSlug = theTitle.replace(/&/g, '-and-')
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/\- \- +/g, '-')
+            .replace(/^-+|-+$/g, '');
+        slugInput.val(theSlug);
+
+
+
+    })
 </script>
+
 @endsection
 
 

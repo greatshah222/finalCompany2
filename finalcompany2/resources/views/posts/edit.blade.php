@@ -1,4 +1,5 @@
 <link href="{{asset('css/select2.min.css')}}" rel="stylesheet" type="text/css" media="all" /> <!-- Nav-CSS -->
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
 
 @section('title','| Create New Post')
 

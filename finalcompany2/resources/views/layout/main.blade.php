@@ -58,62 +58,6 @@
 <!-- //footer -->
 
 <!-- js files -->
-<!-- js -->
-<script type="text/javascript" src="{{asset('dist1/js/jquery-2.1.4.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('dist1/js/bootstrap.js')}}"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
-<!-- //js -->
-<!-- js for banner -->
-<script src="{{asset('dist1/js/jquery.pogo-slider.min.js')}}"></script>
-<script src="{{asset('dist1/js/main.js')}}"></script>
-<!-- /js for banner -->
-<!-- js for navigation -->
-<script src="{{asset('dist1/js/classie.js')}}"></script>
-<script src="{{asset('dist1/js/demo1.js')}}"></script>
 
-<!-- //js -->
-<!-- /js for navigation -->
-<!-- Gallery -->
-<script src="{{asset('dist1/js/lsb.min.js')}}"></script>
-<script>
-    $(window).load(function() {
-        $.fn.lightspeedBox();
-    });
-</script>
-<!-- //Gallery -->
-<!-- Numscroller -->
-<script type="text/javascript" src="{{asset('dist1/js/numscroller-1.0.js')}}"></script>
-<!-- //Numscroller -->
-<!-- Owl-Carousel-JavaScript -->
-<script src="{{asset('dist1/js/owl.carousel.js')}}"></script>
-<script>
-    $(document).ready(function() {
-        $("#owl-demo").owlCarousel ({
-            items : 3,
-            lazyLoad : true,
-            autoPlay : true,
-            pagination : true,
-        });
-    });
-</script>
-<!-- //Owl-Carousel-JavaScript -->
-<!-- start-smoth-scrolling -->
-<script type="text/javascript" src="{{asset('dist1/js/move-top.js')}}"></script>
-
-<script type="text/javascript" src="{{asset('dist1/js/easing.js')}}"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        $(".scroll").click(function(event){
-            event.preventDefault();
-            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-        });
-    });
-</script>
-<!-- start-smoth-scrolling -->
-<!-- smooth scrolling -->
-<script src="{{asset('dist1/js/SmoothScroll.min.js')}}"></script>
-
-<!-- //smooth scrolling -->
-
-<!-- //js files -->
 </body>
 </html>
