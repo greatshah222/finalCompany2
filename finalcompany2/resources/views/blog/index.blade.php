@@ -34,8 +34,8 @@
                             <a href="{{asset('postimages/'.$post->featured)}}"><img src="{{asset('postimages/'.$post->featured)}}" class="img-responsive" alt="djsb"/></a>
                         </div>
                         <a class="blog blue" href="#"></a>
-                        <h3><a href="#">{{$post->title}}</a></h3>
-                        {{substr($post->body,0,200)}} {{strlen($post->body) > 200 ? " ..." : " "}}
+                        <h3><a href="{{url('blog/'.$post->slug)}}">{{$post->title}}</a></h3>
+                        {{substr(strip_tags($post->body) ,0,200)}} {{strlen(strip_tags($post->body) ) > 200 ? " ..." : " "}}
                         <div class="blog-poast-info">
                             <ul>
                                 <li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="#">admin</a></li>

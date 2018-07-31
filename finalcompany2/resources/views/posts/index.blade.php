@@ -49,9 +49,7 @@
                                 </td>
 
 
-
-
-                                <td>{{substr($post->body,0,50)}} {{strlen($post->body) > 50 ? " ..." : " "}}</td>
+                                <td>{{substr(strip_tags($post->body) ,0,50)}} {{strlen(strip_tags($post->body) ) > 50 ? " ..." : " "}}</td>
 
                                 <td>{{$post->created_at->toFormattedDateString()}}</td>
                                     <td><a href="{{route('posts.show',$post->id)}}" class="btn btn-default btn-sm" role="button"><i class="fa fa-eye"></i>view</a> </td>

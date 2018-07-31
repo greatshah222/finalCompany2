@@ -42,6 +42,15 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::resource('categories','CategoryController',['except'=>['create']]);
 Route::resource('tags','TagController',['except'=>['create']]);
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/settings','SettingsController@index')->name('settings');
+    Route::post('/settings/update','SettingsController@update')->name('settings.update');
+
+
+
+});
+
+
 
 
 

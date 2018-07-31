@@ -10,6 +10,7 @@ use App\Tag;
 use Illuminate\Support\Facades\Storage;
 use Image;
 use Illuminate\Http\Request;
+use Mews\Purifier\Facades\Purifier;
 
 class PostController extends Controller
 {
@@ -66,7 +67,8 @@ class PostController extends Controller
         $post =new Post;
         $post->title= $request->title;
         $post->slug= $request->slug;
-        $post->body= $request->body;
+        $post->body=Purifier::clean( $request->body);
+
         $post->category_id=$request->category_id;
 
         if($request->hasFile('featured'))
@@ -167,7 +169,7 @@ return view('posts.show')->withPost($post);
         $post->category_id= $request->input('category_id');
 
 
-        $post->body= $request->input('body');
+        $post->body= Purifier::clean( $request->input('body'));
 
         if($request->hasFile('featured'))
         {

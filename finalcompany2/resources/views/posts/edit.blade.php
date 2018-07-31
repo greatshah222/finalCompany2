@@ -2,7 +2,15 @@
 <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
 
 @section('title','| Create New Post')
+<script>tinymce.init(
+        {
+            selector:'textarea',
+            plugins:'link code',
+            menubar:false
 
+
+        });
+</script>
 
 
 @section('content')
@@ -74,6 +82,18 @@
 
         $(document).ready(function() {
             $('.select2-multi').select2();
+        });
+        $('#title').on('blur',function () {
+            var theTitle = this.value.toLowerCase().trim(),
+                slugInput = $('#slug');
+            theSlug = theTitle.replace(/&/g, '-and-')
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/\- \- +/g, '-')
+                .replace(/^-+|-+$/g, '');
+            slugInput.val(theSlug);
+
+
+
         });
     </script>
 

@@ -63,7 +63,7 @@
 
 
                 </li>
-                <li class="#"><a href="#"><i class="glyphicon glyphicon-home"></i>
+                <li class="current"><a href="#"><i class="glyphicon glyphicon-home"></i>
                         Administration</a></li>
                 <li class="submenu">
                     <a href="#">
@@ -86,6 +86,23 @@
 
                 </li>
 
+                <li class="submenu">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-list"></i> Site Settings
+                        <span class="caret pull-right"></span>
+                    </a>
+                    <ul>
+                        <li><a href="{{asset('settings ')}}">Update Settings</a></li>
+
+                    </ul>
+
+
+
+
+
+
+
+                </li>
 
             </ul>
         </div>

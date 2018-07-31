@@ -47,7 +47,7 @@
 
 
 
-                                <td>{{substr($post->body,0,50)}} {{strlen($post->body) > 50 ? " ..." : " "}}</td>
+                                <td>{{substr(strip_tags($post->body) ,0,50)}} {{strlen(strip_tags($post->body) ) > 50 ? " ..." : " "}}</td>
 
                                 <td>{{$post->deleted_at->toFormattedDateString()}}</td>
                                 <td><a href="{{route('posts.restore',$post->id)}}" class="btn btn-success btn-xs" role="button"><i class="fa fa-undo"></i>Restore</a> </td>

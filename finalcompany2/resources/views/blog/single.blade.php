@@ -28,7 +28,8 @@
                     </div>
                     <a class="blog blue" href="#"></a>
                     <h3><a href="#">{{$post->title}}</a></h3>
-<p>{{$post->body}}</p>
+                    <p>{!! $post->body !!}</p>
+
                     <div class="blog-poast-info">
                         <ul>
                             <li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="#"> Admin </a></li>

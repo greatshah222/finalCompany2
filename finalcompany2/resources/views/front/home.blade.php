@@ -145,7 +145,7 @@
 
                     <h4>    {{substr($post->title,0,20)}} {{strlen($post->title) > 20 ? " ..." : " "}}
                     </h4>
-                    <p class="para-1">{{substr($post->body,0,300)}} {{strlen($post->body) > 50 ? " ..." : " "}}
+                    <p class="para-1">{{substr(strip_tags($post->body) ,0,300)}} {{strlen(strip_tags($post->body) ) > 50 ? " ..." : " "}}
                     </p>
 
                 </div>

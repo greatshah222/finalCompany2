@@ -83,7 +83,7 @@
 
         <h1 style="text-decoration-color: red"> {{ $post->title }}</h1>
         <br>
-        <p class="lead"> {{$post->body}}
+        <p class="lead"> {!! $post->body !!}
         </p>
 
 
