@@ -5,6 +5,15 @@
 
 @section('content')
     <div class="col-md-5">
+
+        <div class="well" style="margin-top: 40px">
+
+
+            <a href="{{asset('postimages/'.$post->featured)}}"><img src="{{asset('postimages/'.$post->featured)}}" class="img-responsive" alt="djsb"/></a>
+        </div>
+
+    </div>
+    <div class="col-md-5">
         <br><br>
         <div class="well">
             <h1 class="title">Post Description</h1>
@@ -63,17 +72,7 @@
 
 
     </div>
-    <div class="col-md-5">
-
-        <div class="well" style="margin-top: 40px">
-
-
-            <a href="{{asset('postimages/'.$post->featured)}}"><img src="{{asset('postimages/'.$post->featured)}}" class="img-responsive" alt="djsb"/></a>
-        </div>
-
-    </div>
-
-
+    <br><br>
     <div class="col-md-10 ">
 
 
@@ -88,6 +87,39 @@
 
 
     </div>
+    <div class="row">
+
+    <div class="col-md-8 col-md-offset-2">
+        <h3>Comments <small>{{$post->comments()->count()}} total</small></h3>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Comment</th>
+            <th width="70px">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($post->comments as $comment)
+            <tr>
+                <td>{{$comment->name}}</td>
+                <td>{{$comment->email}}</td>
+                <td>{{$comment->comment}}</td>
+                <td>
+                    <a href="{{route('comments.edit',$comment->id)}}" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+                    <a href="{{route('comments.delete',$comment->id)}}" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+
+                </td>
+
+
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+    </div></div>
+
 
 
 

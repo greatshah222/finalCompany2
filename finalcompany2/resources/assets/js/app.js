@@ -8,6 +8,8 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+Vue.component('vue-stripe', require('./components/Stripe.vue'));
+
 
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));

@@ -6,7 +6,7 @@ use App\Profile;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Session;
+use Session;
 
 class UserController extends Controller
 {
@@ -73,6 +73,8 @@ $user =User::create([
 
         if($user->save() || ($profile->save()))
 {
+    Session::flash('success','User Successfully Created');
+
 
     return redirect()->route('users.show',$user->id);
 }
@@ -126,6 +128,8 @@ else{
         $user->password=Hash::make($request->password);
         if($user->save())
         {
+            Session::flash('success','User Successfully Updated');
+
             return redirect()->route('users.show',$id);
         }
         else{
@@ -150,6 +154,8 @@ else{
         $user =User::find($id);
         $user->profile->delete();
         $user->delete();
+        Session::flash('success','User Successfully Deleted');
+
         return redirect()->back();
     }
     public function profile()
@@ -164,6 +170,8 @@ else{
         $users =User::find($id);
         $users->admin=1;
         $users->save();
+        Session::flash('success','Made an Admin');
+
         return redirect()->back();
     }
 
@@ -173,6 +181,8 @@ else{
         $user =User::find($id);
         $user->admin=0;
         $user->save();
+        Session::flash('success','Removed Admin');
+
         return redirect()->back();
     }
 }

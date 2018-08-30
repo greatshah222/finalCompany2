@@ -20,6 +20,9 @@
     z-index: 99999;
     background: #fff;
 }
+.team-w3l h3.w3l-title {
+    color: #fff;
+}
 
 
 /*-- Logo --*/
@@ -303,3 +306,190 @@ ul.dropdown-menu {
     text-decoration: none;
     background: black !important;
 }
+social-icons ul li {
+    display: inline-block;
+}
+.social-icons ul li a.fa {
+    font-size: 1em;
+    line-height: 3em;
+    margin: 0 13px;
+    color:#000;
+    text-decoration:none;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    -ms-transition:0.5s all;
+}
+.social-icons ul li a.fa:hover {
+    color:#f87900;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    -ms-transition:0.5s all;
+}
+
+.add-w3ls2:nth-child(2) {
+    margin: 1.5em 0;
+}
+.add-w3ls2 p a {
+    color: #f87900;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.add-w3ls2 p a:hover {
+    color: #2f8eff;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.main-mail-w3lmk {
+    width: 50%;
+    margin: 0 auto;
+    background: #fff;
+    border: 10px double #000;
+    padding: 2em;
+}
+.navbar-right {
+    float: left!important;
+}
+.mail-content h4 {
+    font-size: 2em;
+    color: #000;
+}
+.mail-content p{
+    margin:1.5em 0;
+}
+/*-- //contact --*/
+/*-- map --*/
+
+/*-- //map --*/
+/*-- contact-form --*/
+.w3layouts_mail_grid_right input[type="text"], .w3layouts_mail_grid_right input[type="email"], .w3layouts_mail_grid_right textarea {
+    outline: none;
+    padding: .8em;
+    font-size: 1em;
+    color: #212121;
+    background: #f5f5f5;
+    width: 100%;
+    border: 2px solid #000;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+}
+.w3layouts_mail_grid_right textarea {
+    min-height: 250px;
+    margin-left: 1.1em;
+    width: 97.5% !important;
+    resize: none;
+}
+.w3layouts_mail_grid_right input[type="submit"], .w3layouts_mail_grid_right input[type="reset"] {
+    outline: none;
+    padding: 0.7em 0;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 600;
+    background: #2f8eff;
+    width: 48%;
+    border: none;
+    text-transform: uppercase;
+    margin-left: 1.1em;
+    letter-spacing: 1px;
+}
+.w3layouts_mail_grid_right input[type="submit"]:hover, .w3layouts_mail_grid_right input[type="reset"]:hover {
+    background:green;
+    color:#fff;
+}
+
+
+/*-- social-icons --*/
+/*-- newsletter --*/
+.newsletter-w3l-main {
+    position: absolute;
+    top: -18%;
+    width: 72%;
+    left: 15%;
+}
+.w3layouts-newsletter {
+    background: #f87900;
+}
+.w3l-news, .w3layouts-newsletter{
+    padding: 4em 3em;
+}
+.w3layouts-newsletter h6, .w3l-news h6 {
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-bottom: 1em;
+}
+.w3layouts-newsletter h6 {
+    margin-bottom: 1.6em;
+}
+.w3layouts-newsletter h6 i {
+    margin-right: 10px;
+    vertical-align: top;
+}
+.w3l-news p {
+    color: #fff;
+    font-size: 1.4em;
+}
+.w3l-news {
+    background: #000;
+    padding: 5.2em 4em;
+}
+.agileinfo-newsletter input[type="email"] {
+    width: 77%;
+    padding: 1em;
+    outline: none;
+    color: #000;
+    letter-spacing: 1px;
+    font-size: 1em;
+    border: none;
+    background: #fff;
+}
+::-webkit-input-placeholder{
+    color: #000;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #000;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #000;
+}
+:-ms-input-placeholder {
+    color: #000;
+}
+.agileinfo-newsletter input[type="submit"] {
+    background: #24282e;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border: none;
+    padding: 15px 18px;
+    width: 22%;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.agileinfo-newsletter input[type="submit"]:hover {
+    background: #000000;
+}
+/*-- //newsletter --*/
+
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+
+
+
+
+
+/** new add */

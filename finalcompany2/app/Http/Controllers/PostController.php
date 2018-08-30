@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Storage;
 use Image;
 use Illuminate\Http\Request;
 use Mews\Purifier\Facades\Purifier;
+use Session;
 
 class PostController extends Controller
 {
@@ -24,7 +25,8 @@ class PostController extends Controller
         //create a variable a store the variable in in form the database
 
         $posts=Post::orderBy('id','desc')->paginate(5);
-        return view('posts.index')->withPosts($posts);
+        return view('posts.index')->withPosts($posts)
+            ;
         // return a viewa nd padd in tyhe above
 
 
@@ -40,6 +42,7 @@ class PostController extends Controller
     {
         $categories=Category::all();
         $tags=Tag::all();
+
 
         return view('posts.create')->withCategories($categories)->withTags($tags);
     }
@@ -84,6 +87,8 @@ class PostController extends Controller
 
         $post->save();
         $post->tags()->sync($request->tags,false);
+        Session::flash('success','Post Successfully Created');
+
 
         return redirect()->route('posts.show',$post->id);
 
@@ -185,6 +190,8 @@ return view('posts.show')->withPost($post);
         }
         $post->save();
         $post->tags()->sync($request->tags,true);
+        Session::flash('success','Post Successfully Updated');
+
 
 
         return redirect()->route('posts.show',$post->id);
@@ -202,6 +209,8 @@ return view('posts.show')->withPost($post);
     {
         $post = Post::find($id);
         $post->delete();
+        Session::flash('success','Post Sent to trash');
+
         return redirect()->route('posts.index');
 
 
@@ -211,6 +220,7 @@ return view('posts.show')->withPost($post);
 
         $post = Post::onlyTrashed()->get();
 
+
         return view('posts.trashed')->with('posts',$post);
     }
     public function kill($id)
@@ -219,6 +229,8 @@ return view('posts.show')->withPost($post);
         $post->tags()->detach();
 
         $post->forceDelete();
+        Session::flash('success','Post Successfully Deleted');
+
         return redirect()->route('posts.trashed');
 
 
@@ -229,6 +241,8 @@ return view('posts.show')->withPost($post);
     {
         $post =Post::withTrashed()->where('id',$id)->first();
         $post->restore();
+        Session::flash('success','Post Restored');
+
         return redirect()->route('posts.trashed');
 
 

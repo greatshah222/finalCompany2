@@ -58,6 +58,14 @@ span.fa.fa-lock {
     top: -100%;
     z-index: -1;
 }
+span.fa.fa-inbox{
+    position: absolute;
+    font-size: 75px;
+    color: #e4eae7;
+    left: 45%;
+    top: -100%;
+    z-index: -1;
+}
 /*-- main --*/
 .main {
     padding: 3em 0 0;

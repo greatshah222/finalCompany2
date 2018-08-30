@@ -162,6 +162,9 @@ return [
         // added extra
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        //paypal api
+        Srmklive\PayPal\Providers\PayPalServiceProvider::class,
+
 
 
 
@@ -216,6 +219,8 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\ImageManagerStatic::class,
+        'PayPal' => Srmklive\PayPal\Facades\PayPal::class,
+
 
 
 

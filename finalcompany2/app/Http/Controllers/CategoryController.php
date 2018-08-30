@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Session;
 class CategoryController extends Controller
 {
     /**
@@ -39,6 +39,8 @@ class CategoryController extends Controller
         $category = new Category;
         $category->name = $request->name;
         $category->save();
+        Session::flash('success','New Category Added');
+
 
         return redirect()->route('categories.index');
     }

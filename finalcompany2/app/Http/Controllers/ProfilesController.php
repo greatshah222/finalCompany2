@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Session;
 use App\Profile;
 
 
@@ -108,6 +109,8 @@ class ProfilesController extends Controller
 
         $user->save();
         $user->profile->save();
+        Session::flash('success','Profile Updated');
+
         return redirect()->back();
 
 

@@ -6,46 +6,64 @@
 
 
     <!-- technology -->
-<div class="technology">
+<div class="technology-1">
     <div class="container">
         <div class="col-md-9 technology-left">
-            <div class="tech-no">
                 <!-- technology-top -->
-                <div class="soci">
-                    <ul>
-                        <li><a href="#" class="facebook-1"> </a></li>
-                        <li><a href="#" class="facebook-1 twitter"> </a></li>
-                        <li><a href="#" class="facebook-1 chrome"> </a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-envelope"> </i></a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-print"> </i></a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-plus"> </i></a></li>
-                    </ul>
-                </div>
-                <div class="tc-ch">
 
-                    <div class="tch-img">
+                <div class="business">
+
+                    <div class="blog-grid2">
                         <a href="{{asset('postimages/'.$post->featured)}}"><img src="{{asset('postimages/'.$post->featured)}}" class="img-responsive" alt="djsb"/></a>
+                    <div class="blog-text"><h3><a href="#">{{$post->title}}</a></h3>
+                        <p>{!! $post->body !!}</p></div>
                     </div>
-                    <a class="blog blue" href="#"></a>
-                    <h3><a href="#">{{$post->title}}</a></h3>
-                    <p>{!! $post->body !!}</p>
 
-                    <div class="blog-poast-info">
-                        <ul>
-                            <li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="#"> Admin </a></li>
-                            <li><i class="glyphicon glyphicon-calendar"> </i>30-12-2015</li>
-                            <li><i class="glyphicon glyphicon-comment"> </i><a class="p-blog" href="#">3 Comments </a></li>
-                            <li><i class="glyphicon glyphicon-heart"> </i><a class="admin" href="#">5 favourites </a></li>
-                            <li><i class="glyphicon glyphicon-eye-open"> </i>1.128 views</li>
-                        </ul>
+
+
+
+                <div class="comment-top">
+                    <h2><span class="glyphicon glyphicon-comment"></span> {{$post->comments()->count()}} Comment</h2>
+                    @foreach($post->comments as $comment)
+
+
+                    <div class="media">
+
+                    <div class="media-left">
+                        <a href="#">
+                            <img src="{{asset('image/si.png')}}" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading" style="font-size: 18px">{{$comment->name}}</h5>
+                        <p style="font-size: 0.575em">{{ date('F nS,Y -G:i',strtotime($comment->created_at))  }}</p>
+                        <p style="color: black">{{$comment->comment}}</p>
+                        <!-- Nested media object -->
+
+                    </div>
+                    </div>
+                        <br><br>
+
+                    @endforeach
+
+                </div>
+
+                    <div class="comment" id="comment-form">
+                    <h3>Leave a Comment</h3>
+                    <div class=" comment-bottom">
+                       {{ Form::open(['route'=>['comments.store',$post->id],'method'=>'POST']) }}
+                            <input type="text" placeholder="Name" id="name" name="name">
+                            <input type="text" placeholder="Email" id="email" name="email">
+                            <textarea placeholder="Comments" required="" id="comment" name="comment"></textarea>
+                            <input type="submit" value="Send">
+                      {{ Form::close()}}
                     </div>
                 </div>
-                <div class="clearfix"></div>
 
             </div>
         </div>
         <!-- technology-right -->
-        <div class="col-md-3 technology-right">
+        <div class="col-md-3 technology-right-1">
             <div class="blo-top">
                 <div class="tech-btm">
                     <img src="images/banner1.jpg" class="img-responsive" alt=""/>
@@ -66,41 +84,39 @@
                         </form>
                     </div>
                     <div class="clearfix"> </div>
+
                 </div>
             </div>
             <div class="blo-top1">
                 <div class="tech-btm">
-                    <h4>Top stories of the week </h4>
+                    <h4>Top Blog of the week </h4>
+
+                </div>
+                @foreach($posts as $post)
+
+                <div class="tech-btm">
+                    <h3><a href="{{url('blog/'.$post->slug)}}">{{$post->title}}</a></h3>
                     <div class="blog-grids">
                         <div class="blog-grid-left">
-                            <a href="singlepage.html"><img src="images/6.jpg" class="img-responsive" alt=""/></a>
+                            <a href="{{asset('postimages/'.$post->featured)}}"><img src="{{asset('postimages/'.$post->featured)}}" class="img-responsive" alt="djsb"/></a>
                         </div>
                         <div class="blog-grid-right">
 
-                            <h5><a href="singlepage.html">Pellentesque dui, non felis. Maecenas male</a> </h5>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="blog-grids">
-                        <div class="blog-grid-left">
-                            <a href="singlepage.html"><img src="images/7.jpg" class="img-responsive" alt=""/></a>
-                        </div>
-                        <div class="blog-grid-right">
-
-                            <h5><a href="singlepage.html">Pellentesque dui, non felis. Maecenas male</a> </h5>
+                            <h5><a href="{{url('blog/'.$post->slug)}}">{{substr(strip_tags($post->body) ,0,100)}} {{strlen(strip_tags($post->body) ) > 1000 ? " ..." : " "}}</a></h5>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
 
                 </div>
             </div>
+            @endforeach
 
         </div>
         <div class="clearfix"></div>
         <!-- technology-right -->
     </div>
 </div>
-
+@include('_includes.navbar.footer')
 @endsection
 <!-- technology -->
 <!-- footer -->

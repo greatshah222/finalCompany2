@@ -40,17 +40,14 @@
                             <ul>
                                 <li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="#">admin</a></li>
 
-                                <li><i class="glyphicon glyphicon-calendar"> </i>30-12-2015</li>
-                                <li><i class="glyphicon glyphicon-comment"> </i><a class="p-blog" href="#">3 Comments </a></li>
-                                <li><i class="glyphicon glyphicon-heart"> </i><a class="admin" href="#">5 favourites </a></li>
+                                <li><i class="glyphicon glyphicon-calendar"> </i>{{ date('F nS,Y',strtotime($post->created_at))  }}</li>
+                                <li><i class="glyphicon glyphicon-comment"> </i><a class="p-blog" href="#">{{$post->comments()->count()}} Comments </a></li>
 
                              <a href="{{url('blog/'.$post->slug)}}"> <li class="btn btn-info btn-group-sm"><i class="glyphicon glyphicon-eye-open"> </i>Read More</li></a>
                             </ul>
                         </div>
                     </div>
                     @endforeach
-
-
                     <div class="blog-grids">
                         <div class="blog-grid-left">
                             <h2>View more </h2>
@@ -67,102 +64,85 @@
 
 
 
-                    <div class="clearfix"></div>
 
-                </div>
+
+                <div class="clearfix"></div>
 
             </div>
 
-
-
-
-
-
-
-
-
-            <!-- technology-right -->
-            <div class="col-md-3 technology-right">
-                <div class="blo-top">
-                    <div class="tech-btm">
-                        <img src="images/banner1.jpg" class="img-responsive" alt=""/>
+            </div>
+                <div class="col-md-3 technology-right-1">
+                    <div class="blo-top">
+                        <div class="tech-btm">
+                            <img src="images/banner1.jpg" class="img-responsive" alt=""/>
+                        </div>
                     </div>
-                </div>
-                <div class="blo-top">
-                    <div class="tech-btm">
-                        <h4>Sign up to our newsletter</h4>
-                        <p>Pellentesque dui, non felis. Maecenas male</p>
-                        <div class="name">
-                            <form>
-                                <input type="text" placeholder="Email" required="">
-                            </form>
+                    <div class="blo-top">
+                        <div class="tech-btm">
+                            <h4>Sign up to our newsletter</h4>
+                            <p>Pellentesque dui, non felis. Maecenas male</p>
+                            <form action="{{url('subscribe') }}" method="post">
+                                {{csrf_field()}}
+                                    <input class="name" type="text" placeholder="Email" required="" id="email" name="email" required="">
+
+
+
+
+                                    <input class="button" type="submit" value="Subscribe">
+                                </form>
+
+                            <div class="clearfix"> </div>
+
                         </div>
-                        <div class="button">
-                            <form>
-                                <input type="submit" value="Subscribe">
-                            </form>
-                        </div>
-                        <div class="clearfix"> </div>
                     </div>
-                </div>
-                <div class="blo-top1">
-                    <div class="tech-btm">
-                        <h4>Top stories of the week </h4>
-                        <div class="blog-grids">
-                            <div class="blog-grid-left">
-                                <a href="singlepage.html"><img src="images/6.jpg" class="img-responsive" alt=""/></a>
-                            </div>
-                            <div class="blog-grid-right">
 
-                                <h5><a href="singlepage.html">Pellentesque dui, non felis. Maecenas male</a> </h5>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="blog-grids">
-                            <div class="blog-grid-left">
-                                <a href="singlepage.html"><img src="images/7.jpg" class="img-responsive" alt=""/></a>
-                            </div>
-                            <div class="blog-grid-right">
+                    <div class="blo-top1">
+                        <div class="tech-btm">
+                            <h4>Top Blog of the week </h4>
 
-                                <h5><a href="singlepage.html">Pellentesque dui, non felis. Maecenas male</a> </h5>
-                            </div>
-                            <div class="clearfix"> </div>
                         </div>
-                        <div class="blog-grids">
-                            <div class="blog-grid-left">
-                                <h5>View more </h5>
+
+                            <div class="tech-btm">
+                                <h3><a href="{{url('blog/'.$post->slug)}}">{{$post->title}}</a></h3>
+                                <div class="blog-grids">
+                                    <div class="blog-grid-left">
+                                        <a href="{{asset('postimages/'.$post->featured)}}"><img src="{{asset('postimages/'.$post->featured)}}" class="img-responsive" alt="djsb"/></a>
+                                    </div>
+                                    <div class="blog-grid-right">
+
+                                        <h5><a href="{{url('blog/'.$post->slug)}}">{{substr(strip_tags($post->body) ,0,100)}} {{strlen(strip_tags($post->body) ) > 1000 ? " ..." : " "}}</a></h5>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+
                             </div>
-                            <div class="blog-grid-right">
+                        <div class="tech-btm">
+                            <div class="blog-grids">
+                            <div class="blog-grid-left">
+                                <h2>View more </h2>
+                            </div>
+
                                 {{$posts->links()}}
 
 
                             </div>
                             <div class="clearfix"> </div>
                         </div>
-
-
                     </div>
+
                 </div>
-
+                <div class="clearfix"></div>
+                <!-- technology-right -->
             </div>
-
-
-            <div class="clearfix"></div>
-            <!-- technology-right -->
-        </div>
-
         </div>
     @include('_includes.navbar.footer')
-
-
-
-
-
-
-
-
-
 @endsection
+<!-- technology -->
+<!-- footer -->
+
+
+
+
 <!-- technology -->
 <!-- footer -->
 

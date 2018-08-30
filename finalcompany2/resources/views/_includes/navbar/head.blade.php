@@ -18,8 +18,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
     </script>
     <!-- // Meta Tags -->
+
     <link href="{{asset('dist/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{asset('dist/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" media="all">
+    <link href="{{asset('css/toastr.min.css')}}" rel="stylesheet" type="text/css" media="all" />
 
 
     <!--testimonial flexslider-->
@@ -27,6 +29,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--fonts-->
     <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,800" rel="stylesheet">
+    @yield('extra-css')
+
     <!--//fonts-->
 
 </head>
@@ -39,9 +43,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="col-md-9 top-left">
                 <ul>
-                    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Kathmandu,Nepal</li>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i> +977 9841331624</li>
-                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">villagedev@mail.com</a></li>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>Bagbazar,Kathmadu
+                    </li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> +9779841331624 </li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="{{asset('contact')}}">info@villagedev.com</a></li>
                 </ul>
             </div>
             <div class="col-md-3 top-middle">
@@ -102,10 +107,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             @endauth
                         @endif
 
-                        <li><a href="{{route('blog.index')}}">Blog</a></li>
-                        <li><a href="#">Donate</a></li>
 
-                        <li><a href="#">Contact</a></li>
+                                <li><a href="{{route('blog.index')}}"><i class="fa fa-chrome" aria-hidden="true">Blog</i>
+                                    </a></li>
+
+
+
+
+
+                        </li>
+                        <li><a href="{{route('donate')}}">Donate</a></li>
+
+                        <li><a href="{{asset('contact')}}">Contact</a></li>
                     </ul>
 
 
@@ -129,6 +142,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </div>
 
+
 <script type="text/javascript" src="{{asset('dist1/js/jquery-2.1.4.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('dist1/js/bootstrap.js')}}"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
 <!-- //js -->
@@ -144,11 +158,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- /js for navigation -->
 <!-- Gallery -->
 <script src="{{asset('dist1/js/lsb.min.js')}}"></script>
-<script>
-    $(window).load(function() {
-        $.fn.lightspeedBox();
-    });
-</script>
+
 <!-- //Gallery -->
 <!-- Numscroller -->
 <script type="text/javascript" src="{{asset('dist1/js/numscroller-1.0.js')}}"></script>
@@ -181,6 +191,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- start-smoth-scrolling -->
 <!-- smooth scrolling -->
 <script src="{{asset('dist1/js/SmoothScroll.min.js')}}"></script>
+<script src="{{asset('js/toastr.min.js')}}"></script>
+
+<script>
+    @if(Session::has('success'))
+        toastr.success("{{ Session::get('success') }}")
+    @endif
+</script>
+
 
 <!-- //smooth scrolling -->
 

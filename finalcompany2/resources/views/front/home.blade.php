@@ -6,7 +6,7 @@
     <div class="banner-w3l-mk">
 
         <div class="w3_agileits_header_text">
-            <a href="">  <h3>Donate<i class="fa fa-heart" aria-hidden="true"></i></h3></a>
+            <a href="{{route('donate')}}">  <h3>Donate $1 <i class="fa fa-heart" aria-hidden="true"></i></h3></a>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -18,7 +18,7 @@
                 <div class="container">
                     <h3>They are Humans as Well</h3>
                     <ul class="banner-agileits">
-                        <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
+                        <li><a href="{{asset('contact')}}" class="link-w3l2 scroll">Contact Us</a></li>
                     </ul>
                     <a href="#about" class="btn btn-circle scroll">
                         <i class="fa fa-hand-o-down" aria-hidden="true"></i>
@@ -31,7 +31,7 @@
                 <div class="container">
                     <h3>Together We Can Stop poverty!</h3>
                     <ul class="banner-agileits">
-                        <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
+                        <li><a href="{{asset('contact')}}" class="link-w3l2 scroll">Contact Us</a></li>
                     </ul>
                     <a href="#about" class="btn btn-circle scroll">
                         <i class="fa fa-hand-o-down" aria-hidden="true"></i>
@@ -44,7 +44,7 @@
                 <div class="container">
                     <h3>We Can Make Smile!</h3>
                     <ul class="banner-agileits">
-                        <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
+                        <li><a href="{{asset('contact')}}" class="link-w3l2 scroll">Contact Us</a></li>
                     </ul>
                     <a href="#about" class="btn btn-circle scroll">
                         <i class="fa fa-hand-o-down" aria-hidden="true"></i>
@@ -55,9 +55,9 @@
         <div class="pogoSlider-slide " data-transition="verticalSlide" data-duration="2000"  style="background-image:url(galleryimages/banner4.jpg);">
             <div class="pogoSlider-slide-element">
                 <div class="container">
-                    <h3>Education For Every Kid!</h3>
+                    <h3>Please Donate For the Cause</h3>
                     <ul class="banner-agileits">
-                        <li><a href="#mail" class="link-w3l2 scroll">Contact Us</a></li>
+                        <li><a href="{{asset('contact')}}" class="link-w3l2 scroll">Contact Us</a></li>
                     </ul>
                     <a href="#about" class="btn btn-circle scroll">
                         <i class="fa fa-hand-o-down" aria-hidden="true"></i>
@@ -67,58 +67,36 @@
         </div>
     </div>
     </section>
+    <div class="stats" id="about">
+        <div class="container">
+            <h3 class="w3l-title"><span>A</span>bout <span>U</span>s</h3>
+<p>Do the right thing. Volunteer.
+</p>            <div class="stats-info">
+                <div class="col-md-3 col-sm-3 col-xs-6 stats-grid slideanim">
+                    <i class="fa fa-facebook" aria-hidden="true"></i><div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='1200' data-delay='.5' data-increment="1">1200</div>
+                    <h4 class="stats-info">Likes</h4>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 stats-grid slideanim">
+                    <i class="fa fa-twitter" aria-hidden="true"></i><div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='8000' data-delay='.5' data-increment="1">8000</div>
+                    <h4 class="stats-info">Followers</h4>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 stats-grid slideanim">
+                    <i class="fa fa-linkedin"></i><div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='9060' data-delay='.5' data-increment="10">9060</div>
+                    <h4 class="stats-info">Donations</h4>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 stats-grid slideanim">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i><div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='6700' data-delay='.5' data-increment="1">6700</div>
+                    <h4 class="stats-info">Donors</h4>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
 
 
 
     <!-- Events -->
 
-    <div class="service" id="services">
-        <div class="container">
-            <h3 class="w3l-title"><span>O</span>ur <span>S</span>ervices</h3>
-            <div class="serve-grids-top">
-                <div class="col-md-4 col-sm-4 col-xs-4 service-box wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".3s">
-                    <div class=" hi-icon-effect-6">
-                        <a href="#set-6" class="hi-icon fa fa-graduation-cap"></a>
-                    </div>
-                    <h5>Charity for Education</h5>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-4 service-box wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".3s">
-                    <div class=" hi-icon-effect-6">
-                        <a href="#set-6" class="hi-icon fa fa-gratipay"></a>
-                    </div>
-                    <h5>Help Little Hands</h5>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-4  service-box wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".3s">
-                    <div class=" hi-icon-effect-6">
-                        <a href="#set-6" class="hi-icon fa fa-child"></a>
-                    </div>
-                    <h5>Agricultural and Rural Development</h5>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-            <div class="serve-grids-top second">
-                <div class="col-md-4 col-sm-4 col-xs-4 service-box wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s">
-                    <div class=" hi-icon-effect-6">
-                        <a href="#set-6" class="hi-icon fa fa-gift"></a>
-                    </div>
-                    <h5>Donate for Children</h5>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-4 service-box wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s">
-                    <div class=" hi-icon-effect-6">
-                        <a href="#set-6" class="hi-icon fa fa-bullhorn"></a>
-                    </div>
-                    <h5>Drug Addiction Awareness Program  </h5>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-4 service-box wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".3s">
-                    <div class=" hi-icon-effect-6">
-                        <a href="#set-6" class="hi-icon fa fa-medkit"></a>
-                    </div>
-                    <h5>Health and Medication</h5>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
-    </div>
     <div class="events-section">
         <div class="container">
             <h3 class="w3l-title"><span>Our</span> <span>Blog</span></h3>
@@ -138,7 +116,7 @@
 
 
                     <ul>
-                        <li><span class="fa fa-calendar-o" aria-hidden="true"></span> {{$post->created_at->toFormattedDateString()}}</li>
+                        <li><span class="fa fa-calendar-o" aria-hidden="true"></span> {{$post->updated_at->toFormattedDateString()}}</li>
                         <a href="{{url('blog/'.$post->slug)}}">  <li> <button class="btn btn-info" style="margin-left: 30px">Read More</button></li></a>
 
                     </ul>
@@ -415,6 +393,10 @@
             </div>
         </div>
     </div>
+
+
+
+
     <!-- //team -->
     <!-- mail -->
 

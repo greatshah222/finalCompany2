@@ -5,11 +5,11 @@
         <div class="sidebar content-box" style="display: block;">
             <ul class="nav">
                 <!-- Main menu -->
-                <li class="current"><a href="#"><i class="glyphicon glyphicon-home"></i>
-                        General</a></li>
+                <li class="current"><a href="{{asset('manage')}}"><i class="glyphicon glyphicon-home"></i>
+                       Dashboard</a></li>
                 <li class="submenu">
                     <a href="#">
-                        <i class="glyphicon glyphicon-list"></i>  Posts Dashboard
+                        <i class="glyphicon glyphicon-list"></i>  Posts
                         <span class="caret pull-right"></span>
                     </a>
                     <!-- Sub menu -->
@@ -67,7 +67,7 @@
                         Administration</a></li>
                 <li class="submenu">
                     <a href="#">
-                        <i class="glyphicon glyphicon-list"></i> Users Dashboard
+                        <i class="glyphicon glyphicon-list"></i> Users
                         <span class="caret pull-right"></span>
                     </a>
                     <ul>

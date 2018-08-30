@@ -255,4 +255,701 @@ i.glyphicon.glyphicon-plus{
     border-bottom: 1px dotted #aeaeae;
     padding: 1.3em 0;
 }
+
+/*--single--*/
+h4.media-heading {
+    font-size: 1.5em;
+    color: #333333;
+    text-align:left;
+    margin:0;
+    font-weight:400;
+}
+.media-body p {
+    color: #9E9E9E;
+    font-size: 0.875em;
+    line-height: 1.8em;
+}
+.comment-bottom input[type="text"],.comment-bottom textarea {
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid #e2e2e2;
+    padding:1em 0.8em;
+    font-size: 1em;
+    color: black;
+    margin:0 0 0.7em ;
+    float:left;
+}
+.comment-bottom textarea{
+    resize:none;
+    margin: 0em 0 0.5em;
+    min-height: 180px;
+    -webkit-appearance: none;
+}
+.comment-bottom input[type="submit"] {
+    width: 11%;
+    font-size: 1.1em;
+    background: #fa4b2a;
+    padding: 0.5em 1em;
+    text-align: center;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    cursor:pointer;
+}
+.comment-bottom input[type="submit"]:hover {
+    background:#333333;
+}
+.comment h3, .comment-top h2 {
+    color: #f53f1a;
+    font-size: 2.5em;
+    text-align: left;
+    padding: 0 0 0.5em;
+    font-weight:400;
+}
+.comment {
+    padding: 3em 0 0;
+}
+.blog-text h5 {
+    font-size: 1.7em;
+    margin: 0.6em 0;
+    color:#f53f1a;
+    font-weight:700;
+}
+/*--//single--*/
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color:#464646 ! important;
+}
+.copyright p {
+    font-size: 0.875em;
+    color: #000;
+    line-height: 1.8em;
+}
+.copyright p a{
+    color: #000;
+    font-weight:700;
+}
+.copyright p a:hover{
+    color:#fa4b2a;
+}
+/*-- responsive-design --*/
+@media (max-width: 1024px){
+    ul.nav.navbar-nav li a {
+        padding: 15px 14px ! important;
+    }
+    .banner {
+        padding: 8em 0 0;
+    }
+    .banner h2 {
+        font-size: 2em;
+    }
+    .banner p {
+        font-size: 1em;
+    }
+    .banner {
+        min-height: 500px;
+    }
+    .tech-btm h4 {
+        font-size: 1.17em;
+        margin-bottom: 0.5em;
+    }
+    .blog-grid-right {
+        width: 59%;
+    }
+    .tech-btm h5 {
+        font-size: 0.9em;
+    }
+    .footer h6 {
+        font-size: 1.5em;
+    }
+    .footer-middle {
+        padding-left: 7em;
+    }
+    .footer-right {
+        padding-left: 6em;
+    }
+    .footer h4 {
+        font-size: 1.6em;
+    }
+    .foot-nav li a {
+        padding: 0.7em 1.15em;
+    }
+    .technology {
+        min-height: 200em;
+    }
+    .comment-bottom input[type="submit"] {
+        width: 16%;
+        font-size: 1em;
+        padding: 0.4em 1em;
+    }
+    .contact-grid p {
+        font-size: 13px;
+    }
+    .contact-grids input[type="text"]:nth-child(2) {
+        margin: 0 0.7em;
+    }
+}
+/*-- responsive-design --*/
+@media (max-width: 966px){
+    ul.nav.navbar-nav li a {
+        padding: 12px 5px ! important;
+        font-size:0.95em;
+    }
+    .search {
+        width: 23%;
+    }
+    .social {
+        width: 36.33%;
+    }
+    .logo a h1 {
+        font-size: 1.8em;
+    }
+    .technology-left {
+        width: 70%;
+        float:left;
+    }
+    .technology-right {
+        width: 30%;
+        float: right;
+    }
+    .tc-ch {
+        float: left;
+        width: 91%;
+        padding:1em;
+    }
+    .tech-btm {
+        padding: 1em;
+    }
+    .tech-btm h4 {
+        text-align: center;
+        line-height: 1.2em;
+    }
+    .tech-btm p {
+        font-size: 0.8125em;
+        line-height: 1.5em;
+    }
+    .tc-ch p {
+        font-size: 0.8125em;
+        line-height: 1.5em;
+    }
+    .blog-poast-info li i {
+        font-size: 1.1em;
+        margin-top:-3px;
+    }
+    .blog-poast-info ul li {
+        margin-right: 0.3em;
+    }
+    .blog-grid-right {
+        width: 58%;
+    }
+    .tech-btm h5 {
+        font-size: 0.875em;
+    }
+    .technology {
+        min-height: 164em;
+    }
+    .footer-left {
+        float: left;
+        width: 33.33%;
+    }
+    .footer-middle {
+        padding-left: 3em;
+        float: left;
+        width: 33.33%;
+    }
+    .footer-right {
+        padding-left: 3em;
+        float: left;
+        width: 33.33%;
+    }
+    .footer p {
+        font-size: 0.8125em;
+        line-height: 1.5em;
+    }
+    .footer-right li a {
+        font-size: 0.825em;
+    }
+    .footer h6 {
+        font-size: 1.3em;
+        padding:0.5em 1em;
+    }
+    .footer {
+        padding: 3em 0 2em;
+    }
+    .foot-nav li a {
+        padding: 0.7em 0.6em;
+        font-size:0.9em;
+    }
+    .technology-1 p {
+        font-size: 0.8125em;
+    }
+    .technology-1 h3 {
+        font-size: 1.5em;
+    }
+    .vide {
+        padding: 1em;
+    }
+    .technology-right-1 {
+        width: 30%;
+        float: right;
+    }
+    .vide-1 {
+        padding: 1em 1em;
+    }
+    .business {
+        padding: 1em 1em 1em;
+    }
+    .comment h3, .comment-top h2 {
+        font-size: 2em;
+    }
+    h4.media-heading {
+        font-size: 1.3em;
+    }
+    .contact-grids input[type="text"]:nth-child(2) {
+        margin: 0 0.5em;
+    }
+    .contact-grid {
+        width: 31%;
+    }
+    .contact-grid:nth-child(2) {
+        margin: 0 0em;
+    }
+}
+/*-- responsive-design --*/
+@media (max-width: 768px){
+    .banner {
+        min-height: 440px;
+        padding:6em 0 0;
+    }
+    span.glyphicon.glyphicon-file, span.glyphicon.glyphicon-qrcode, span.glyphicon.glyphicon-globe, span.glyphicon.glyphicon-screenshot, span.glyphicon.glyphicon-link, span.glyphicon.glyphicon-share, span.glyphicon.glyphicon-record {
+        font-size: 3em;
+    }
+    .business-left {
+        margin-top: 2em;
+    }
+}
+/*-- responsive-design --*/
+@media (max-width: 736px){
+    .logo a h1 {
+        font-size: 1.4em;
+        margin-top:0.2em;
+    }
+    .social {
+        width: 42.33%;
+    }
+    .header-top {
+        padding: 1em 0;
+    }
+    .banner {
+        min-height: 330px;
+        padding: 4em 0 0;
+    }
+    .banner h2 {
+        font-size: 1.7em;
+    }
+    .banner p {
+        font-size: 0.875em;
+        width:100%;
+    }
+    .technology-left {
+        width: 100%;
+    }
+    .technology-right {
+        width: 100%;
+        float: none;
+    }
+    .technology-right {
+        width: 100%;
+        float: none;
+        margin: 183em 0 0;
+    }
+    .tech-btm {
+        padding: 2em;
+    }
+    .footer {
+        margin-top: 2em;
+    }
+    .footer h6 {
+        font-size: 1.2em;
+        padding: 0.5em 0.3em;
+    }
+    .footer h4 {
+        font-size: 1.5em;
+    }
+    .blog-grid-left {
+        float: left;
+        width: 18%;
+    }
+    .tc-ch {
+        float: left;
+        width: 91.5%;
+        padding: 2em;
+    }
+    .navbar-nav {
+        margin: 7.5px 0px;
+    }
+    .technology-right-1 {
+        width: 100%;
+        float: right;
+        margin-top: 1em;
+    }
+    .banner1 {
+        min-height: 150px;
+    }
+    .navbar-toggle .icon-bar {
+        background: #fff ! important;
+    }
+    .foot-nav li a {
+        padding: 0.5em 0.6em;
+        font-size: 0.85em;
+    }
+}
+/*-- responsive-design --*/
+@media (max-width: 667px){
+    .foot-nav li a {
+        padding: 0.5em 0.4em;
+    }
+}
+/*-- responsive-design --*/
+@media (max-width: 600px){
+    .foot-nav li a {
+        padding: 0.5em 0.2em;
+    }
+}
+/*-- responsive-design --*/
+@media (max-width: 568px){
+    .logo {
+        float: left;
+        width: 40%;
+        text-align: center;
+    }
+    .social {
+        width: 100%;
+        float: right;
+        text-align: right;
+        margin-top: 1em;
+        padding: 0;
+    }
+    .logo a h1 {
+        margin-top:0;
+        padding: 0.35em 0.5em;
+    }
+    .search {
+        width: 40%;
+    }
+    .banner {
+        padding: 3em 0 0;
+    }
+    .rev-img {
+        float: left;
+        width: 100%;
+    }
+    .rev-info {
+        float: right;
+        width: 100%;
+        margin-top: 1em;
+    }
+    .contact-grid {
+        width: 100%;
+        margin-bottom: 1em;
+        text-align:left;
+    }
+    .contact-icons {
+        padding: 1em 0 1em;
+    }
+    .contact-grids input[type="text"] {
+        width: 100%;
+        float: left;
+        margin-bottom: 0.5em;
+    }
+    .contact-grids input[type="text"]:nth-child(2) {
+        margin: 0 0 0.5em;
+    }
+    .contact-grids textarea {
+        height: 200px;
+    }
+    .contact-grids input[type="submit"] {
+        width: 31%;
+        padding: 7px 0px;
+    }
+    .foot-nav li a {
+        font-size: 0.8em;
+    }
+}
+/*-- responsive-design --*/
+@media (max-width: 480px){
+    .footer-left {
+        float: none;
+        width: 100%;
+    }
+    .footer-middle {
+        float: none;
+        width: 100%;
+        margin:1.5em 0;
+        padding-left:1em;
+    }
+    .footer-right{
+        float: none;
+        width: 100%;
+        padding-left:1em;
+    }
+    .technology-1 h3 {
+        font-size: 1.2em;
+    }
+    .servc-grid-left {
+        float: left;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 1em;
+    }
+    .servc-grid-right {
+        float: left;
+        width: 100%;
+        padding: 0;
+    }
+    .servc-grid {
+        margin-bottom: 1em;
+    }
+    .servc-grid-right h4 {
+        font-size: 1.5em;
+    }
+    .blog-text h5 {
+        font-size: 1.4em;
+    }
+    .business li a {
+        font-size: 0.875em;
+    }
+    .map iframe {
+        width: 100%;
+        height: 210px;
+    }
+    .map {
+        margin-top: 2em;
+    }
+    .foot-nav ul li {
+        margin-bottom: 0.5em;
+    }
+    .foot-nav li a {
+        padding: 0.5em 0.84em;
+        border-right:none ! important;
+    }
+}
+
+
+/*--business--*/
+.business {
+    padding: 2em 2em 1.8em;
+    background: #fff;
+}
+.business li {
+    display: block;
+}
+.business li a {
+    color: #333333;
+    font-size: 1em;
+    line-height: 2em;
+}
+.business h3 {
+    color: #f53f1a;
+    font-size: 1.7em;
+    font-weight: 700;
+    margin: 0 0 0.5em;
+}
+.business h2 {
+    color: #f53f1a;
+    font-size: 1.7em;
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+.business h2  a{
+    color: #f53f1a;
+}
+.business h4{
+    color: black;
+    font-size: 1.7em;
+    font-weight: 700;
+    margin: 0.5em 0;
+    text-align: center;
+}
+.business-bottom {
+    margin-top: 3em;
+}
+.business-top {
+    padding-bottom: 3em;
+    border-bottom: 1px solid #aeaeae;
+}
+/*--business--*/
+/*-- responsive-design --*/
+@media (max-width: 414px){
+    .tc-ch {
+        float: left;
+        width: 87.5%;
+        padding: 1em;
+    }
+    .banner h2 {
+        font-size: 1.2em;
+    }
+    .banner p {
+        font-size: 0.8em;
+        line-height: 1.4em;
+    }
+    .banner {
+        min-height:280px;
+    }
+    .banner a {
+        font-size: 0.9em;
+        padding: 0.5em 1em;
+    }
+    .tech-btm {
+        padding: 1em;
+    }
+    .logo {
+        width: 46%;
+    }
+    .logo a h1 {
+        padding: 0.6em 0.5em;
+        font-size:1.2em;
+    }
+    .vide iframe {
+        min-height: 150px ! important;
+    }
+    .servc-grid-right h4 {
+        font-size: 1.25em;
+    }
+    .media-left, .media-right, .media-body {
+        float: left ! important;
+        width: 100% ! important;
+    }
+    h4.media-heading {
+        text-align: left;
+        margin: 1em 0;
+    }
+    .comment-bottom input[type="submit"] {
+        width: 25%;
+    }
+    .business h2 {
+        font-size: 1.4em;
+    }
+    .design-top {
+        margin-top: 1.7em;
+    }
+}
+/*-- responsive-design --*/
+@media (max-width: 384px){
+    .logo {
+        width: 50%;
+    }
+    .logo a h1 {
+        font-size:1.2em;
+        padding: 0.55em 0.5em;
+    }
+    .search {
+        margin: 0;
+    }
+    .tc-ch {
+        width: 86.5%;
+    }
+    .foot-nav li a {
+        padding: 0.5em 0.55em;
+    }
+}
+/*-- responsive-design --*/
+@media (max-width: 320px){
+    .logo a h1 {
+        font-size: 1em;
+        padding: 0.5em 0.5em;
+    }
+    .search {
+        width: 43%;
+        border: 1px solid #333333;
+        padding: 0.3em 0;
+    }
+    .social {
+        text-align: center;
+    }
+    .header-top {
+        padding: 0.8em 0 0;
+    }
+    .search input[type="submit"] {
+        top: 2px;
+    }
+    .banner {
+        padding: 2em 0 0;
+    }
+    .navbar-toggle {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    .technology-left {
+        padding: 0;
+    }
+    .tc-ch {
+        width: 84.6%;
+    }
+    .tech-no {
+        top: -23px;
+    }
+    .banner p {
+        margin: 1em auto 1.5em;
+    }
+    .banner a {
+        font-size: 0.85em;
+        padding: 0.4em 0.8em;
+    }
+    .soci {
+        padding-top: 1.42em;
+    }
+    .tc-ch h3 {
+        font-size: 1.2em;
+    }
+    .technology-right {
+        margin: 196em 0 0;
+        padding: 0;
+    }
+    .blog-grid-left {
+        width: 30%;
+    }
+    .blog-grid-right {
+        width: 65%;
+    }
+    .footer-left,.footer-middle,.footer-right {
+        padding: 0;
+    }
+    .footer {
+        margin-top: 1em;
+    }
+    .footer {
+        padding: 2em 0 2em;
+    }
+    .footer h4 {
+        margin-bottom: 0.5em;
+    }
+    .copyright {
+        padding: 0.5em 0;
+    }
+    .banner1 {
+        min-height: 130px;
+    }
+    .technology-right-1 {
+        padding: 0;
+    }
+    .blog-text h5 {
+        font-size: 1.2em;
+    }
+    .business-left {
+        margin-top: 1em;
+        padding: 0;
+    }
+    .foot-nav li a {
+        padding: 0.5em 0.35em;
+        font-size: 0.75em;
+    }
+}
 /*--technology-right--*/

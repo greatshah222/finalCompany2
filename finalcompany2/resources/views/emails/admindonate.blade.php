@@ -1,0 +1,1 @@
+<h4>your company has recieved a donation of $1 from {{$name}}</h4>

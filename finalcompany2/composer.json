@@ -12,7 +12,10 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.4.0",
         "mews/purifier": "^2.1",
-        "santigarcor/laratrust": "5.0.*"
+        "paypal/rest-api-sdk-php": "*",
+        "santigarcor/laratrust": "5.0.*",
+        "srmklive/paypal": "~1.0",
+        "stripe/stripe-php": "^6.16"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

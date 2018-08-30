@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Tag;
 use App\Post;
 use Illuminate\Http\Request;
+use Session;
 
 class TagController extends Controller
 {
@@ -38,6 +39,8 @@ class TagController extends Controller
         $tag=new Tag;
         $tag->name =$request->name;
         $tag ->save();
+        Session::flash('success','Tag Successfully Created');
+
         return redirect()->route('tags.index');
 
     }
@@ -80,6 +83,8 @@ class TagController extends Controller
             ['name'=>'required|max:255']);
         $tag->name = $request->name;
         $tag->save();
+        Session::flash('success','Tag Successfully Updated');
+
         return redirect()->route('tags.show',$tag->id);
     }
 
@@ -94,6 +99,8 @@ class TagController extends Controller
         $tag =Tag::find($id);
         $tag->posts()->detach();
         $tag->delete();
+        Session::flash('success','Tag Successfully Deleted');
+
         return redirect()->route('tags.index');
     }
 }

@@ -50,6 +50,8 @@
 
 
 @yield('value')
+@yield('new')
+
 
 
 

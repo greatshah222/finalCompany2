@@ -1,3 +1,5 @@
+
+
 <div class="footer">
     <div class="container">
         <!-- Social-icons -->
@@ -13,9 +15,7 @@
         <div class="logo-footer">
             <div class="col-md-3 agileinfo_footer_grid">
                 <h4>About Us</h4>
-                <p>Duis aute irure dolor in esse cillum dolore eu
-                    fugiat nulla pariatur. <span>Excepteur sint proident
-					sunt in culpa qui officia anim id est laborum.</span></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ea ex harum iure minus quod sequi, voluptas. Aliquam, animi commodi earum, illo incidunt ipsum perspiciatis reiciendis reprehenderit rerum, tempore velit?</p>
                 <p class="adam">- Mark Thomson, CEO</p>
             </div>
             <div class="col-md-3 agileinfo_footer_grid f1">
